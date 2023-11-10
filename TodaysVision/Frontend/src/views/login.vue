@@ -38,7 +38,7 @@ export default {
             try {
                 // Send a POST request to your login API with email and password
                 const response = await axios.post(
-                    import.meta.env.VITE_ROOT_API + '/login', {
+                    import.meta.env.VITE_ROOT_API, {
                         email: this.email,
                         password: this.password,
                     });
