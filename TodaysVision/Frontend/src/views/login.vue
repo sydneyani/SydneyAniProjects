@@ -37,7 +37,8 @@ export default {
         async login() {
             try {
                 // Send a POST request to your login API with email and password
-                const response = await axios.post('https://todays-vision-e4hm.onrender.com/login', {
+                const response = await axios.post(
+                    import.meta.env.VITE_ROOT_API + '/login', {
                         email: this.email,
                         password: this.password,
                     });
