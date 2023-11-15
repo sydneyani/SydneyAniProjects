@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zaky Hug - Customer Reviews</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #E4F6F8; /* Baby blue background */
+      color: black; /* Text color changed to black */
+    }
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    li {
+      float: left;
+    }
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    li a:hover {
+      background-color: black;
+    }
+    h1 {
+      text-align: center;
+      color: black; /* Text color changed to black */
+    }
+    .review-form {
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: white; /* Background color changed to white */
+    }
+    .review-form label, .review-form input[type="submit"] {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .review-form input[type="text"], .review-form textarea, .review-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .review-form input[type="submit"] {
+      background-color: #333; /* Button color changed to match navbar */
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      float: right;
+    }
+    .review-list {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: white; /* Background color changed to white */
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .review {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .rating {
+      color: gold; /* Color of rating stars changed to gold */
+    }
+    footer {
+      background-color: #333; /* Footer background color changed */
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+     header {
+     background-color: #FDE8D7;
+     padding: 10px;
+     text-align: center;
+     color: black;
+
+  </style>
+</head>
+<body>
+  <ul class="navbar">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+       
+        <li><a href="products.html">Products</a></li>
+        
+        <li><a href="reviews.html">Reviews</a></li>
+        
+    </ul>
+<header>
+  <h1>Customer Reviews for Zaky Hug</h1>
+</header>
+  <!-- Review Form -->
+  <div class="review-form">
+    <h2>Share Your Experience!</h2>
+    <form id="reviewForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="rating">Rating:</label>
+      <select id="rating" name="rating" required>
+        <option value="5">5 stars</option>
+        <option value="4">4 stars</option>
+        <option value="3">3 stars</option>
+        <option value="2">2 stars</option>
+        <option value="1">1 star</option>
+      </select>
+
+      <label for="review">Review:</label>
+      <textarea id="review" name="review" rows="4" required></textarea>
+
+      <input type="submit" value="Submit Review">
+    </form>
+  </div>
+
+  <!-- Review List -->
+  <div class="review-list">
+    <h2>What Our Customers Say</h2>
+    <!-- Customer Reviews -->
+    <div class="review">
+      <span class="rating">★★★★★</span>
+      <p><b>Jessica M.</b></p>
+      <p>The Zaky Hug has been a game-changer for our family's routine. Our baby feels comforted, and we feel relieved. Absolutely recommend it!</p>
+    </div>
+
+    <div class="review">
+      <span class="rating">★★★★★</span>
+      <p><b>David & Laura</b></p>
+      <p>We were amazed at how much our twins love their Zaky Hugs. These have helped us so much during nap times!</p>
+    </div>
+
+    <div class="review">
+      <span class="rating">★★★★★</span>
+      <p><b>Aaron T.</b></p>
+      <p>I wasn't sure at first, but now I'm convinced. Seeing how calm it makes my little one, I can't praise it enough.</p>
+    </div>
+
+    <div class="review">
+      <span class="rating">★★★★</span>
+      <p><b>Samantha W.</b></p>
+      <p>The Zaky Hug is a wonderful product. It's well-made and durable. Our baby just loves it!</p>
+    </div>
+
+    <div class="review">
+      <span class="rating">★★★★★</span>
+      <p><b>Michael G.</b></p>
+      <p>This is a must-have for any parent! It's like an extra pair of hands when you need it most.</p>
+    </div>
+  </div>
+
+ <script>
+  // Function to handle form submission and display the review
+  document.getElementById("reviewForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const rating = document.getElementById("rating").value;
+    const review = document.getElementById("review").value;
+    const reviewList = document.querySelector(".review-list"); // Fix the typo here
+
+    // Create a new review element and append it to the review list
+    const newReview = document.createElement("div");
+    newReview.classList.add("review");
+    newReview.innerHTML = `<span class="rating">${"★".repeat(rating)}</span>
+                           <p><strong>${name}</strong></p>
+                           <p>${review}</p>`;
+    reviewList.appendChild(newReview);
+
+    // Reset the form fields
+    document.getElementById("name").value = "";
+    document.getElementById("rating").value = "5";
+    document.getElementById("review").value = "";
+  });
+</script>
+</body>
+</html>
