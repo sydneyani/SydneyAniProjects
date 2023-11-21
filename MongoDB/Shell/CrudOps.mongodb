@@ -1,0 +1,155 @@
+// Exercise A: Create a new database named employees
+
+use employees
+
+// Listing all DBs on your instance
+
+show dbs
+
+
+
+
+
+// Exercise B: Create a database named temporary
+
+use temporary
+
+// Add a collection named test
+
+db.createCollection("test")
+
+// List databases and collections before dropping the database
+
+show dbs
+show collections
+
+// Now drop the database
+
+db.dropDatabase()
+
+// List databases after dropping the temporary database
+
+show dbs
+
+// Back to employees database to create multiple collections
+use employees
+
+// Create collections using distinct department names
+
+db.createCollection("engineering")
+db.createCollection("hr")
+db.createCollection("sales")
+db.createCollection("marketing")
+
+// List all collections in the current database
+
+show collections
+
+
+
+
+
+
+// Exercise C: Insert employee documents into the collections
+
+// Assuming inserting into the 'engineering' collection
+
+db.engineering.insertMany([
+    { employeeid: 1001, name: "Alice", salary: 70000 },
+    { employeeid: 1002, name: "Bob", salary: 80000 },
+    { employeeid: 1003, name: "Charlie", salary: 90000 }
+])
+
+// Retrieve all the entered data
+
+db.engineering.find({})
+
+
+
+
+// Exercise D: Add the following employees to any collection
+
+db.engineering.insertOne({
+    employeeid: 1187,
+    name: "John Steight",
+    salary: 75000
+})
+db.engineering.insertOne({
+    employeeid: 2455,
+    name: "Syed",
+    salary: 90000
+})
+db.engineering.insertOne({
+    employeeid: 24113,
+    name: "Wright John",
+    salary: 65000
+})
+
+
+// Find 2 documents using the field name employeeid
+
+db.engineering.find({ employeeid: { $in: [1187, 2455] } })
+
+// Find 2 documents using the field name name
+
+db.engineering.find({ name: { $in: ["John Steight", "Syed"] } })
+
+// Find all the documents where the name field starts with John
+
+db.engineering.find({ name: /^John/ })
+
+// Find all the documents where the name field contains John
+
+db.engineering.find({ name: /John/ })
+
+
+
+
+
+
+// Exercise E: Import the data into a new collection called zips
+
+C:\Program Files\MongoDB\Tools\100\bin>mongoimport --db employees --collection zips --file C:\Users\sydne\Downloads\zips.json
+
+2023-11-21T15:26:10.368-0600    connected to: mongodb://localhost/
+2023-11-21T15:26:10.871-0600    29353 document(s) imported successfully. 0 document(s) failed to import.
+
+// The mongoimport command will be executed in the terminal (shell)
+
+//Get all cities with a population of less than 1500
+
+db.zips.find({pop: {$lt: 1500}})
+
+//Find all data for the city CHESTER using a query operator
+
+db.zips.find({city: "CHESTER"})
+
+//Use array query operator to find entries for the specified location
+
+db.zips.find({"loc": [-84.38570799999999, 45.015207]})
+
+//Use a logical operator to find all entries that match the city WARREN or a specific location
+
+db.zips.find({$or: [{city: "WARREN"}, {"loc": [-80.76424299999999, 41.231819]}]})
+
+
+
+
+// Exercise F: Use the $where operator
+
+// Find all employees who have a salary > 75000
+
+db.engineering.find({ $where: function() { return this.salary > 75000 } })
+
+// Find employees where the name contains John
+
+db.engineering.find({ $where: function() { return /John/.test(this.name) } })
+
+
+
+
+
+
+// Exercise G: Using projection to return only name and salary
+
+db.engineering.find({}, { name: 1, salary: 1, _id: 0 })
