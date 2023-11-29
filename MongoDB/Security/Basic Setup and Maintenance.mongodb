@@ -1,0 +1,38 @@
+//Create Database and Collection
+use securityDB
+
+db.createCollection("logs")
+
+//Inserting Documents into a Collection
+db.logs.insertMany([
+    { level: "error", message: "Failed login attempt", timestamp: new Date() },
+    { level: "info", message: "New user registered", timestamp: new Date() }
+])
+
+//Querying Documents
+db.logs.find({ level: "error" })
+
+// Updating Documents
+db.logs.updateMany(
+    { level: "error" },
+    { $set: { reviewed: true } }
+)
+
+// Deleting Documents
+db.logs.deleteMany({ level: "info" })
+
+//Creating an Index for Faster Searches
+db.logs.createIndex({ level: 1 })
+
+//Aggregation for Log Analysis
+db.logs.aggregate([
+    { $group: { _id: "$level", count: { $sum: 1 } } }
+])
+
+//Setting up Role-Based Access Control
+db.createUser({
+    user: "logManager",
+    pwd: "password123",
+    roles: [{ role: "read", db: "securityDB" }]
+})
+
