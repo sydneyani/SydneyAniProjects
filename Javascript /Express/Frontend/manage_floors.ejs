@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Floors</title>
+    <style>
+        body {
+            background-color: black; 
+            color: white; 
+            text-align: center;
+        }
+        
+        .navbar {
+            background-color: tan;
+            padding: 10px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            margin: 0 10px;
+        }
+
+        table {
+  width: 80%; /* Adjust the width as needed */
+  margin: 20px auto; /* Increased margin around the table */
+  background-color: black;
+  padding: 20px; /* Increased padding inside the table */
+  border-collapse: separate; /* Optional: affects the spacing of table cells */
+  border-spacing: 10px; /* Optional: adds space between table cells */
+  font-size: 1.2em; /* Larger font size for table content */
+}
+
+        th, td {
+            padding: 10px;
+            border: 1px solid white;
+        }
+        .table-container {
+            background-image: url('https://s3-eu-west-1.amazonaws.com/blog-ecotree/blog/0001/01/ad46dbb447cd0e9a6aeecd64cc2bd332b0cbcb79.jpeg'); /* Replace with your actual image path */
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 10px;
+            padding: 190px;
+        }
+        .table {
+            background-color: black;
+            /* Make sure the table background isn't transparent so that the text is readable */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/landing">Home</a>
+        <a href="/manage_rooms">Manage Rooms</a>
+        <a href="/manage_occupants">Manage Occupants</a>
+    </div>
+    <div class="table-container">
+    <h1>List of Floors</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Level</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% floors.forEach(function(floor) { %>
+            <tr>
+                <td><%= floor.level %></td>
+                <td><%= floor.name %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    </div>
+</body>
+</html>
