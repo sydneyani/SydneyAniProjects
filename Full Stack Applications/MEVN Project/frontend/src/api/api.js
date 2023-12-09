@@ -389,29 +389,6 @@ export const deleteService = async (id) => {
 // This allows our front end to make only one call to the API endpoint and improve the speed
 // Previously it would make 3 different calls to 3 different APIs, which now it could do to only one. 
 
-// export const getClientDetails = async (clientId) => {
-//   try {
-//     const [clientResponse, clientEventsResponse, nonClientEventsResponse] =
-//       await Promise.all([
-//         apiClient.get(`/clients/id/${clientId}`),
-//         apiClient.get(`/events/client/${clientId}`),
-//         apiClient.get(`/events/client/${clientId}/not-registered`),
-//       ]);
-
-//     const client = clientResponse.data;
-//     const clientEvents = clientEventsResponse.data;
-//     const nonClientEvents = nonClientEventsResponse.data;
-
-//     return {
-//       client,
-//       clientEvents,
-//       nonClientEvents,
-//     };
-//   } catch (error) {
-//     throw error;
-//   }
-// };
-
 export const getClientDetails = async (clientId) => {
   try {
     const response = await apiClient.get(`/clients/details/${clientId}`);
@@ -425,24 +402,6 @@ export const getClientDetails = async (clientId) => {
 // API GET call to combine getEventById, getEventAttendees, getServices
 // This allows our front end to make only one call to the API endpoint and improve the speed
 // Previously it would make 3 different calls to 3 different APIs, which now it could do to only one. 
-// export const getEventDetails = async (eventId) => {
-//   try {
-//     const [eventResponse, attendeesResponse, servicesResponse] = await Promise.all([
-//       apiClient.get(`/events/id/${eventId}`),
-//       apiClient.get(`/events/attendees/${eventId}`),
-//       apiClient.get("/services/"),
-//     ]);
-
-//     const event = eventResponse.data;
-//     const attendees = attendeesResponse.data;
-//     const services = servicesResponse.data;
-
-//     return { event, attendees, services };
-//   } catch (error) {
-//     throw error;
-//   }
-// };
-
 export const getEventDetails = async (eventId) => {
   try {
     const response = await apiClient.get(`/events/details/${eventId}`);
