@@ -24,19 +24,6 @@ router.get("/", authMiddleWare, (req, res, next) => {
     .sort({ date: -1 });
 });
 
-// API endpoint to GET single event by ID
-// router.get("/id/:id", authMiddleWare, (req, res, next) => {
-//   events.findOne({ _id: req.params.id, org: org }, (error, data) => {
-//     if (error) {
-//       return next(error);
-//     } else if (!data) {
-//       res.status(400).send("Event not found");
-//     } else {
-//       res.json(data);
-//     }
-//   });
-// });
-
 // API endpoint to get details of a single event, its attendees, and all services
 router.get('/details/:id', authMiddleWare, async (req, res, next) => {
   const eventId = req.params.id;
@@ -49,29 +36,29 @@ router.get('/details/:id', authMiddleWare, async (req, res, next) => {
     
     // Fetch all services
     const servicesPromise = services.find({ org: org }).exec();
- 
+
     // Use Promise.all to resolve all promises simultaneously
     const [event, eventAttendees, allServices] = await Promise.all([
       eventPromise,
       attendeesPromise,
       servicesPromise
     ]);
- 
+
     // If the event is not found, return an error
     if (!event) {
       return res.status(400).send('Event not found');
     }
- 
+
     // Prepare the attendees list from the populated event document
     const attendees = eventAttendees ? eventAttendees.attendees : [];
- 
+
     // Send back the consolidated data
     res.json({
       event,
       attendees,
       services: allServices
     });
- 
+
   } catch (error) {
     next(error);
   }
@@ -100,57 +87,9 @@ router.get("/search/", authMiddleWare, (req, res, next) => {
   });
 });
 
-// // API endpoint to GET events for which a client is signed up
-// router.get("/client/:id", authMiddleWare, (req, res, next) => {
-//   events.find({ attendees: req.params.id, org: org }, (error, data) => {
-//     if (error) {
-//       return next(error);
-//     } else {
-//       res.json(data);
-//     }
-//   });
-// });
 
-// // API endpoint to GET events for which a client is not signed up
-// router.get(
-//   "/client/:id/not-registered",
-//   authMiddleWare,
-//   async (req, res, next) => {
-//     try {
-//       const eventsNotRegistered = await events.find({
-//         attendees: { $nin: [req.params.id] },
-//         org: org,
-//       });
-//       res.json(eventsNotRegistered);
-//     } catch (error) {
-//       next(error);
-//     }
-//   }
-// );
 
-// API endpoint to GET attendee details for an event
-// router.get("/attendees/:id", authMiddleWare, (req, res, next) => {
-//   events.findById(req.params.id, (error, event) => {
-//     if (error) {
-//       return next(error);
-//     } else {
-//       if (!event)
-//         res.status(400).send("Event not found")
-//       else {
-//         const attendeeIds = event.attendees.map((attendee) =>
-//           attendee.toString()
-//         );
-//         clients.find({ _id: { $in: attendeeIds } }, (error, clients) => {
-//           if (error) {
-//             return next(error);
-//           } else {
-//             res.json(clients);
-//           }
-//         });
-//       }
-//     };
-//   });
-// });
+
 
 // API endpoint to GET all events for a given service
 router.get("/service/:id", authMiddleWare, async (req, res, next) => {
