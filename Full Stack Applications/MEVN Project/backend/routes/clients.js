@@ -43,21 +43,9 @@ router.get('/', authMiddleWare, async (req, res) => {
   }
 });
 
-// // API endpoint to GET single client by ID
-// router.get('/id/:id', authMiddleWare, (req, res, next) => {
-//   clients.findOne({ _id : req.params.id, orgs: org }, (error, data) => {
-//     if (error) {
-//       return next(error);
-//     } else if (!data) {
-//       res.status(400).send('Client not found');
-//     } else {
-//       res.json(data);
-//     }
-//   });
-// });
-
 // API endpoint to get all client details, including events registered and not registered
 router.get('/details/:id', authMiddleWare, async (req, res, next) => {
+  console.log("Received a request for client details for ID:", req.params.id); // Log when a request is received
   const clientId = req.params.id;
   try {
     // Find client by ID
@@ -65,29 +53,28 @@ router.get('/details/:id', authMiddleWare, async (req, res, next) => {
     if (!client) {
       return res.status(400).send('Client not found');
     }
- 
+
     // Find events for which a client is signed up
     const clientEvents = await events.find({ attendees: clientId, org: org }).exec();
- 
+
     // Find events for which a client is not signed up
     const eventsNotRegistered = await events.find({
       attendees: { $nin: [clientId] },
       org: org,
     }).exec();
- 
+
     // Consolidate the data into one response object
     const responseData = {
       client: client,
       clientEvents: clientEvents,
       nonClientEvents: eventsNotRegistered,
     };
- 
+
     res.json(responseData);
   } catch (error) {
     next(error);
   }
 });
-
 
 // API endpoint to GET entries based on search query
 // Ex: '...?firstName=Bob&lastName=&searchBy=name'
