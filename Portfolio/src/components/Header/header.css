@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .navigation {
+    display: flex;
+  }
+  
+  .nav-link {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .nav-link:hover {
+    color: #000;
+  }
+  
+  .social-media {
+    display: flex;
+  }
+  
+  .social-link {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .social-link:hover {
+    color: #555;
+  }
+  
