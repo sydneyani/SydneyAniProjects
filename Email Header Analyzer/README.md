@@ -68,4 +68,4 @@ Reason: The unusual routing may be due to technical issues rather than spoofing,
 
 
 
-These examples demonstrate how such a tool might analyze different types of email headers and provide results based on the extracted information and its comparison against known data. In a real implementation, the analysis would be more complex and detailed, considering various other factors and potential anomalies in email headers.
+Summary: These examples demonstrate how such a tool might analyze different types of email headers and provide results based on the extracted information and its comparison against known data. In a real implementation, the analysis would be more complex and detailed, considering various other factors and potential anomalies in email headers.
