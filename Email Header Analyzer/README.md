@@ -13,6 +13,9 @@ Result: Is this email spoofed? False
 Reason: The domain matches the return path, and the transmission route is consistent with a legitimate email from apple.com.
 
 
+
+
+
 Email Header: Spoofed Email
 
 Extracted Information:
@@ -28,6 +31,9 @@ Result: Is this email spoofed? True
 Reason: The return path does not match the sender’s domain, and the transmission route is inconsistent with the expected route for trustedbank.com.
 
 
+
+
+
 Email Header: Phishing Attempt
 
 Extracted Information:
@@ -41,6 +47,9 @@ Transmission Route: Normal routing from secure-payment.com server
 Result: Is this email spoofed? True
 
 Reason: Even though the domain and return path match, the domain secure-payment.com is flagged in the database as a known phishing site.
+
+
+
 
 
 Email Header: Email with Technical Issues
