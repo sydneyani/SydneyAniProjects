@@ -1,4 +1,4 @@
-Email Header: Legitimate Email
+1. Email Header: Legitimate Email
 
 Extracted Information:
 
@@ -16,7 +16,7 @@ Reason: The domain matches the return path, and the transmission route is consis
 
 
 
-Email Header: Spoofed Email
+2. Email Header: Spoofed Email
 
 Extracted Information:
 
@@ -34,7 +34,7 @@ Reason: The return path does not match the sender’s domain, and the transmissi
 
 
 
-Email Header: Phishing Attempt
+3. Email Header: Phishing Attempt
 
 Extracted Information:
 
@@ -52,7 +52,7 @@ Reason: Even though the domain and return path match, the domain secure-payment.
 
 
 
-Email Header: Email with Technical Issues
+4. Email Header: Email with Technical Issues
 
 Extracted Information:
 
