@@ -214,12 +214,20 @@
     </div>
   </div>
 </div>
-      <div v-if="currentSubTab === 'GPT-4'"><h1>ADD FRIEND</h1>
-        <p>You can add friends with their Scriptora username.</p>
-        <input type="text" placeholder="Enter a Scriptora username..." v-model="username" />
-        <button @click="sendFriendRequest">Send Friend Request</button>
-        <div class="success-message" v-if="successMessage">{{ successMessage }}</div>
-      </div>
+<div v-if="currentSubTab === 'GPT-4'" class="gpt4-container">
+  <div class="gpt4-content">
+    <h1>GPT-4: Enhance Your Performance</h1>
+    <p>
+      Integrating GPT-4, OpenAI’s advanced AI, our AI Assistant offers rapid, in-depth coding support, enhancing development speed and understanding for a smoother coding journey.
+    </p>
+    <a href="https://openai.com/gpt-4" target="_blank">Access GPT-4 Now</a>
+  </div>
+  <div class="gpt4-image">
+    <!-- Replace 'path-to-your-image.jpg' with the actual path to your image -->
+    <img src="aipic.png" alt="GPT-4 AI Assistant">
+  </div>
+</div>
+
     </main>
   </div>
 </template>
@@ -949,6 +957,60 @@ export default {
   max-height: 150px; /* Adjusts the maximum height to something reasonable */
 }
 
+.gpt4-container {
+    display: flex;
+    justify-content: space-around; /* Or 'space-between' depending on your design preference */
+    align-items: center;
+    height: 100vh; /* This will make it take up the full viewport height */
+    color: #FFFFFF;
+    background-color: #2C2F33;
+    font-family: 'Arial', sans-serif;
+  }
 
+  .gpt4-content {
+    flex-basis: 50%; /* Adjust the width of the text container */
+    padding: 40px;
+  }
+
+  .gpt4-content h1 {
+    font-size: 3rem; /* Large font size for the header */
+    font-weight: bold;
+    color: #7289DA;
+    margin-bottom: 20px;
+  }
+
+  .gpt4-content p {
+    font-size: 1.5rem; /* Larger font size for the paragraph */
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+
+  .gpt4-content a {
+    display: inline-block;
+    background-color: #7289DA;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.25rem; /* Larger font size for the link */
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .gpt4-content a:hover {
+    background-color: #5b6dac;
+  }
+
+  .gpt4-image {
+    flex-basis: 50%; /* Adjust the width of the image container */
+    /* Add styles for the image container if needed */
+  }
+
+  .gpt4-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: if you want rounded corners on the image */
+  }
 </style>
 
