@@ -25,7 +25,7 @@
             <!--Login link - Link only shows is user is logged out-->
             <li v-if="!user.isLoggedIn">
               <router-link to="/signup">
-                <span style="position:relative; top: 6px" class="material-icons">login</span>
+                <span style="position:relative; top: 6px" class="material-icons">lock</span>
                 Sign Up!
               </router-link>
             </li>
@@ -41,38 +41,18 @@
               <span style="position:relative; top: 6px" class="material-icons">logout</span>
               Logout
             </li>
-            <!--Client Intake Form link - only shows if user is an editor-->
-            <li v-if="user.role === 'editor'">
-              <router-link to="/clientform">
-                <span style="position: relative; top: 6px" class="material-icons">people</span>
-                Client Intake Form
-              </router-link>
-            </li>
-            <!--Create Event link - only shows if user is an editor-->
-            <li v-if="user.role === 'editor'">
-              <router-link to="/eventform">
-                <span style="position: relative; top: 6px" class="material-icons">event</span>
-                Create Event
-              </router-link>
-            </li>
-            <!--Create Service link - only shows if user is an editor-->
-            <li v-if="user.role === 'editor'">
-              <router-link to="/serviceform">
-                <span style="position: relative; top: 6px" class="material-icons">volunteer_activism</span>
-                Create Service
-              </router-link>
-            </li>
+           
             <!--Find Client link - only shows if user is logged in-->
             <li v-if="user.isLoggedIn">
               <router-link to="/thecode">
-                <span style="position: relative; top: 6px" class="material-icons">event</span>
+                <span style="position: relative; top: 6px" class="material-icons">code</span>
                 The Code
               </router-link>
             </li>
             <!--Find Event link - only shows if user is logged in-->
             <li v-if="user.isLoggedIn">
               <router-link to="/voicechat">
-                <span style="position: relative; top: 6px" class="material-icons">volunteer_activism</span>
+                <span style="position: relative; top: 6px" class="material-icons">voice_chat</span>
                 Voice Chats
               </router-link>
             </li>
