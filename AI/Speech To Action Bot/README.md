@@ -36,8 +36,9 @@ Speech-To-Action-Bot/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/Speech-To-Action-Bot.git
-cd Speech-To-Action-Bot
+[git clone https://github.com/sydneyani/SydneyAniProjects.git]
+cd AI
+cd Speech To Action Bot
 ```
 
 2. Install the required dependencies:
