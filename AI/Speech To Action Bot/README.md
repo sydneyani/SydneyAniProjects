@@ -64,11 +64,11 @@ python app.py
 
 ## Supported Commands
 
-"Open browser" - Opens Chrome
-"Open notepad" - Opens Notepad
-"Shutdown" - Shuts down the computer
-"Open Microsoft Word" - Opens Microsoft Word
-Various phrases like "Generate a report about [topic]" - Opens Word and creates a report using OpenAI
+- "Open browser" - Opens Chrome
+- "Open notepad" - Opens Notepad
+- "Shutdown" - Shuts down the computer
+- "Open Microsoft Word" - Opens Microsoft Word
+- Various phrases like "Generate a report about [topic]" - Opens Word and creates a report using OpenAI
 
 ## How It Works
 
