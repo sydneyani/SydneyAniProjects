@@ -1,0 +1,4095 @@
+[
+    {
+        "sentence": "Television footage showed lawmakers beating each other with walking sticks and throwing chairs and books at each other at a hotel in Nairobi where parliament is meeting .",
+        "entities": [
+            {
+                "text": "Nairobi",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Police say one of those detained is Somali trade minister , Musa Sudi Yalahow .",
+        "entities": [
+            {
+                "text": "Musa Sudi Yalahow",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Somali lawmakers are divided over whether to allow peacekeepers into Somalia from bordering countries .",
+        "entities": [
+            {
+                "text": "Somalia",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Friday , East African officials attempted to defuse the situation , saying the first group of peacekeepers would only come from countries that do not border Somalia .",
+        "entities": [
+            {
+                "text": "Somalia",
+                "label": "GPE"
+            },
+            {
+                "text": "Friday",
+                "label": "DATE"
+            },
+            {
+                "text": "East African",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The World Health Organization has confirmed Burma's first human case of bird flu.",
+        "entities": [
+            {"text": "World Health Organization", "label": "ORG"},
+            {"text": "Burma", "label": "GPE"}
+        ]
+    },
+    {
+        "sentence": "Based on information provided by the Burmese Ministry of Health, the WHO identified the victim as a seven-year-old girl from eastern Shan State.",
+        "entities": [
+            {"text": "Burmese", "label": "NORP"},
+            {"text": "Ministry of Health", "label": "ORG"},
+            {"text": "WHO", "label": "ORG"},
+            {"text": "Shan State", "label": "GPE"}
+        ]
+    },
+    {
+        "sentence": "Officials say she developed symptoms of the disease last month in an area where there had been an outbreak of the H5N1 virus in poultry.",
+        "entities": [
+            {"text": "H5N1", "label": "ORG"},
+            {"text": "last month", "label": "DATE"}
+        ]
+    },
+    {
+        "sentence": "The girl survived the disease.",
+        "entities": []
+    },
+    {
+        "sentence": "Seven countries in East Asia have reported human cases of the potentially deadly H5N1 virus.",
+        "entities": [
+            {"text": "East Asia", "label": "LOC"},
+            {"text": "H5N1", "label": "ORG"}
+        ]
+    },
+    {
+        "sentence": "The two with the greatest number of cases are Indonesia and Vietnam.",
+        "entities": [
+            {"text": "Indonesia", "label": "GPE"},
+            {"text": "Vietnam", "label": "GPE"}
+        ]
+    },
+    {
+        "sentence": "More than 200 people in 13 countries have died from the disease since 2003 .",
+        "entities": [
+            {
+                "text": "2003",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "A second group that says it has links to the al-Qaida terrorist network has claimed responsibility for Thursday 's attacks in London .",
+        "entities": [
+            {
+                "text": "al-Qaida",
+                "label": "ORG"
+            },
+            {
+                "text": "Thursday",
+                "label": "DATE"
+            },
+            {
+                "text": "London",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Injured tube passengers are escorted away from Edgware Road Tube Station in London following explosion , Thursday A group calling itself the \" Abu Hafs al-Masri Brigades \" posted a statement on an Arabic language Islamist website Saturday , congratulating itself for the bombings on three subway trains and one bus in the central part of the British capital .",
+        "entities": [
+            {
+                "text": "Thursday",
+                "label": "DATE"
+            },
+            {
+                "text": "Saturday",
+                "label": "DATE"
+            },
+            {
+                "text": "London",
+                "label": "GPE"
+            },
+            {
+                "text": "Abu Hafs al-Masri Brigades",
+                "label": "ORG"
+            },
+            {
+                "text": "Islamist",
+                "label": "NORP"
+            },
+            {
+                "text": "Arabic",
+                "label": "NORP"
+            },
+            {
+                "text": "British",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The same group also claimed responsibility for the March , 2004 Madrid train bombings that killed nearly 200 people .",
+        "entities": [
+            {
+                "text": "2004",
+                "label": "DATE"
+            },
+            {
+                "text": "March",
+                "label": "DATE"
+            },
+            {
+                "text": "Madrid",
+                "label": "GPE"
+            }
+            
+        ]
+    },
+    {
+        "sentence": "Just hours after Thursday 's bombings , a group calling itself \" The Secret Organization of al-Qaida in Europe \" issued a statement on another Arabic language Islamist website claiming responsibility for the attacks .",
+        "entities": [
+            {
+                "text": "al-Qaida",
+                "label": "ORG"
+            },
+            {
+                "text": "Thursday",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Neither claim has been verified .",
+        "entities": []
+    },
+    {
+        "sentence": "Britain says it will extradite a computer expert to the United States to face terrorism charges .",
+        "entities": [
+            {
+                "text": "United States",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Home Secretary Charles Clarke says he has agreed to extradite 31-year-old British citizen Babar Ahmad , who is accused of running web sites in support of the al-Qaida terrorist network , Afghanistan 's ousted Taleban regime and Russia 's Chechen separatists .",
+        "entities": [
+            {
+                "text": "al-Qaida",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Ahmad has been in jail since his arrest in August 2004 under a U.S. arrest warrant .",
+        "entities": [
+            {
+                "text": "2004",
+                "label": "DATE"
+            },
+            {
+                "text": "Mr. Ahmad",
+                "label": "PERSON"
+            },
+            {
+                "text": "U.S",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "New British laws allow the United States to seek the extradition of someone without presenting any evidence .",
+        "entities": [
+            {
+                "text": "United States",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "A British court ruled earlier this year that Mr. Ahmad should be extradited after the United States promised he would not be labeled an \" enemy combatant \" and imprisoned in the U.S. naval base on Guantanamo Bay , Cuba .",
+        "entities": [
+            {
+                "text": "United States",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The case was then passed on to Mr. Clarke .",
+        "entities": [
+            {
+                "text": "Mr. Clarke",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Ahmad 's family is denouncing the decision , and promises to appeal .",
+        "entities": [
+            {
+                "text": "Mr. Ahmad",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Kurdish witnesses in northwestern Iran say security forces killed at least 11 Kurdish demonstrators in a clash Wednesday in the city of Saqiz .",
+        "entities": [
+            {
+                "text": "Kurdish",
+                "label": "NORP"
+            },
+            {
+                "text": "Wednesday",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Witnesses tell VOA that government buildings in the town were damaged in the clash .",
+        "entities": [
+
+            {
+                "text": "VDA",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "They say police are heavily deployed across Saqiz .",
+        "entities": [
+            {
+                "text": "Police",
+                "label": "ORG"
+            },
+            {
+                "text": "Saqiz",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The Iranian government has not commented on the reports .",
+        "entities": [
+            {
+                "text": "Iranian",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The protest and clash are the latest in a wave of violence across Kurdish areas of Iran following last month 's killing of a Kurdish activist by Iranian security forces .",
+        "entities": [
+            {
+                "text": "Kurdish",
+                "label": "NORP"
+            },
+            {
+                "text": "Iranian",
+                "label": "NORP"
+            },
+            {
+                "text": "Iran",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "A North Korean patrol boat crossed briefly into South Korean waters Sunday to seize a Chinese fishing boat that had been illegally fishing in the North .",
+        "entities": [
+            {
+                "text": "Sunday",
+                "label": "DATE"
+            },
+            {
+                "text": "North Korean",
+                "label": "NORP"
+            },
+            {
+                "text": "South Korean",
+                "label": "NORP"
+            },
+            {
+                "text": "Chinese",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The patrol boat sped nearly two kilometers into the southern section of the Yellow Sea , notifying the South Korean navy that it was tracking an illegal fishing boat .",
+        "entities": [
+            {
+                "text": "Yellow Sea",
+                "label": "LOC"
+            },
+            {
+                "text": "South Korean",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "South Korea 's Joint Chiefs of Staff said in a statement , the South Korean navy radioed a warning about the border crossing , and 25 minutes later the patrol boat crossed back into North Korean waters .",
+        "entities": [
+            {
+                "text": "South Korea",
+                "label": "GPE"
+            },
+            {
+                "text": "North Korean",
+                "label": "NORP"
+            },
+            {
+                "text": "South Korean",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The Yellow Sea , on the western side of the Korean Peninsula , has been the scene of deadly North and South confrontations in recent years .",
+        "entities": [
+            {
+                "text": "The Yellow Sea",
+                "label": "LOC"
+            },
+            {
+                "text": "Korean Peninsula",
+                "label": "LOC"
+            },
+            {
+                "text": "recent years",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "The two sides have established a radio protocol to prevent future clashes .",
+        "entities": []
+    },
+    {
+        "sentence": "Activists from the environmental group Greenpeace displayed dead whales and dolphins in front of Berlin 's famed Brandenburg Gate Monday to demonstrate why it believes a whale hunting moratorium should continue .",
+        "entities": [
+            {
+                "text": "Greenpeace",
+                "label": "ORG"
+            },
+            {
+                "text": "Monday",
+                "label": "DATE"
+            },
+            {
+                "text": "Berlin",
+                "label": "GPE"
+            },
+            {
+                "text": "Bradenburg Gate",
+                "label": "LOC"
+            },
+            {
+                "text": "Monday",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Greenpeace says it found the dead mammals on various European beaches , saying some drowned while trapped in fisherman 's nets while others were badly wounded in collisions with ships .",
+        "entities": [
+            {
+                "text": "Greenpeace",
+                "label": "ORG"
+            },
+            {
+                "text": "European",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Greenpeace marine biologist Stefanie Werner says 3,00,000 whales and dolphins drown in fishing nets every year and many others die from pollution , accidents with ships , or from the effects of global warming .",
+        "entities": [
+            {
+                "text": "Greenpeace",
+                "label": "GPE"
+            },
+            {
+                "text": "Stefanie Werner",
+                "label": "PERSON"
+            },
+            {
+                "text": "every year",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "She asked how can pro-whaling nations justify hunting them ?",
+        "entities": []
+    },
+    {
+        "sentence": "The International Whaling Commission meets next week in Anchorage , Alaska , where Iceland , Japan , and Norway are expected to push to end a worldwide ban on commercial whaling .",
+        "entities": [
+            {
+                "text": "International Whaling Commission",
+                "label": "ORG"
+            },
+            {
+                "text": "Anchorage",
+                "label": "GPE"
+            },
+            {
+                "text": "Alaska",
+                "label": "GPE"
+            },
+            {
+                "text": "Iceland",
+                "label": "GPE"
+            },
+            {
+                "text": "Japan",
+                "label": "GPE"
+            },
+            {
+                "text": "Norway",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Whaling is a tradition and an industry for many in those countries .",
+        "entities": []
+    },
+    {
+        "sentence": "Police in Nepal 's capital have arrested a senior opposition party official ahead of a planned protest .",
+        "entities": [
+            {
+                "text": "Police",
+                "label": "ORG"
+            },
+            {
+                "text": "Nepal",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Police detained Arjun Narsingh , spokesman of the Nepali Congress Party , outside the party 's offices in Kathmandu .",
+        "entities": [
+            {
+                "text": "Police",
+                "label": "ORG"
+            },
+            {
+                "text": "Arjun Narsingh",
+                "label": "PERSON"
+            },
+            {
+                "text": "Nepali",
+                "label": "NORP"
+            },
+            {
+                "text": "Kathmandu",
+                "label": "GPE"
+            },
+            {
+                "text": "Congress Party",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Narsingh had called a party meeting to plan demonstrations on Friday - Nepal 's Democracy Day - against the new royal government .",
+        "entities": [
+            {
+                "text": "Friday",
+                "label": "DATE"
+            },
+            {
+                "text": "Mr. Narsingh",
+                "label": "PERSON"
+            },
+            {
+                "text": "Nepal",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Nepal 's King Gyanendra dismissed the previous government and declared a state of emergency two weeks ago because of what he said was its failure to put down a growing Maoist rebellion .",
+        "entities": [
+            {
+                "text": "Nepal",
+                "label": "GPE"
+            },
+            {
+                "text": "King Gyanedra",
+                "label": "PERSON"
+            },
+            {
+                "text": "Maoist",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Outside Nepal the power grab has been widely criticized and several nations , including the United States , some EU countries and Nepal 's close ally India , have recalled their ambassadors for consultations .",
+        "entities": [
+            {
+                "text": "United States",
+                "label": "GPE"
+            },
+            {
+                "text": "Nepal",
+                "label": "GPE"
+            },
+            {
+                "text": "EU",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "An Iranian news agency says authorities have reinstated 300 more candidates ahead of next month 's parliamentary elections , bringing the total reinstated in the past week to almost 600 .",
+        "entities": [
+            {
+                "text": "Iranian",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Iran 's official news agency , IRNA , quotes an official as saying the candidates ' names will be released later Saturday .",
+        "entities": [
+            {
+                "text": "Saturday",
+                "label": "DATE"
+            },
+            {
+                "text": "Iran",
+                "label": "GPE"
+            },
+            {
+                "text": "IRNA",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "Iran 's Interior Ministry banned more than 2,200 candidates , mostly reformists , from competing in the March 14 vote .",
+        "entities": [
+            {
+                "text": "Iran",
+                "label": "GPE"
+            },
+            {
+                "text": "Interior Ministry",
+                "label": "ORG"
+            },
+            {
+                "text": "March 14",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Several days ago , Iran 's highest oversight body , the Guardian Council , said that it had reinstated 280 of those candidates .",
+        "entities": [
+            {
+                "text": "Iran",
+                "label": "GPE"
+            },
+            {
+                "text": "Guardian Council",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "Iranian authorities can disqualify candidates who are not deemed as showing sufficient loyalty to Iran 's Islamic system .",
+        "entities": [
+            {
+                "text": "Iranian",
+                "label": "NORP"
+            },
+            {
+                "text": "Iran",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Reformists and conservatives have strongly criticized the mass disqualifications , warning that they undermine the election process .",
+        "entities": []
+    },
+    {
+        "sentence": "British Prime Minister Tony Blair has again defended plans to toughen anti-terrorism laws and detain suspects for three months without charge .",
+        "entities": [
+            {
+                "text": "British",
+                "label": "NORP"
+            },
+            {
+                "text": "Tony Blair",
+                "label": "PERSON"
+            },
+            {
+                "text": "Prime Minister",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Blair told his monthly news conference in London that police have made compelling arguments to extend the length of detention from its current two weeks .",
+        "entities": [
+            {
+                "text": "Mr. Blair",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "He says authorities are fighting a new kind of terrorism , which requires more time to investigate and often the cooperation of foreign agencies .",
+        "entities": []
+    },
+    {
+        "sentence": "But civil rights activists and opposition politicians say the changes are counterproductive and will undermine efforts by authorities to get more cooperation from Britain 's Muslim community .",
+        "entities": [
+            {
+                "text": "Britain",
+                "label": "GPE"
+            },
+            {
+                "text": "Muslim",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Blair proposed the new laws , which would also allow authorities to deport extremists , after the July 7 suicide bombings in London that killed 52 people .",
+        "entities": [
+            {
+                "text": "Mr. Blair",
+                "label": "PERSON"
+            },
+            {
+                "text": "July 7",
+                "label": "DATE"
+            },
+            {
+                "text": "London",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Venezuelan President Hugo Chavez warns that he will not renew the license of a television station he accuses of backing a failed coup against him in 2002 .",
+        "entities": [
+            {
+                "text": "2002",
+                "label": "DATE"
+            },
+            {
+                "text": "Venezuelan",
+                "label": "NORP"
+            },
+            {
+                "text": "Hugo Chavez",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Chavez said in a speech Thursday to the military that the concession for Radio Caracas Television will end in March .",
+        "entities": [
+            {
+                "text": "Thursday",
+                "label": "DATE"
+            },
+            {
+                "text": "Mr. Chavez",
+                "label": "PERSON"
+            },
+            {
+                "text": "Radio Caracas Television",
+                "label": "PERSON"
+            },
+            {
+                "text": "March",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Earlier , the information minister , William Lara , said the broadcaster 's license would expire next May .",
+        "entities": [
+            {
+                "text": "William Lara",
+                "label": "PERSON"
+            },
+            {
+                "text": "May",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Chavez also said he will not tolerate any media outlets that support efforts to remove him from power .",
+        "entities": [
+            {
+                "text": "Mr. Chavez",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "There was no immediate response from the Caracas-based station .",
+        "entities": [
+            {
+                "text": "Carcas",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "President Chavez has repeatedly denounced RCTV and other pro-opposition broadcasters for what he says is overly critical coverage of his government .",
+        "entities": [
+            {
+                "text": "President Chavez",
+                "label": "PERSON"
+            },
+            {
+                "text": "RCTV",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "The press rights group Reporters Without Borders has urged Venezuela to end its efforts to shut down RCTV .",
+        "entities": [
+            {
+                "text": "Reporters Without Borders",
+                "label": "PERSON"
+            },
+            {
+                "text": "Venezuela",
+                "label": "GPE"
+            },
+            {
+                "text": "RCTV",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "The death toll from Saturday 's collapse of a metal exposition hall roof in the southern Polish city of Katowice continues to climb .",
+        "entities": [
+            {
+                "text": "Saturday",
+                "label": "DATE"
+            },
+            {
+                "text": "Polish",
+                "label": "NORP"
+            },
+            {
+                "text": "Katowice",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Officials now say they have pulled at least 26 bodies from the rubble .",
+        "entities": [
+            {
+                "text": "Officials",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "A spokesman for the government of the Silesia region , where Katowice is located , said another 130 were injured .",
+        "entities": [
+            {
+                "text": "Katowice",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Police say about 500 people from Poland and other countries across Europe were inside the facility attending a homing pigeon exhibition .",
+        "entities": [
+            {
+                "text": "Police",
+                "label": "ORG"
+            },
+            {
+                "text": "Poland",
+                "label": "GPE"
+            },
+            {
+                "text": "Europe",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Officials say several foreigners were believed to be among the casualties , but there are conflicting reports about their nationalities and condition .",
+        "entities": [
+            {
+                "text": "Officials",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "Officials say the collapse was likely the result of the weight of snow on the roof after heavy snows and an arctic freeze that swept through Poland and neighboring countries this week .",
+        "entities": [
+            {
+                "text": "Officials",
+                "label": "ORG"
+            },
+            {
+                "text": "Poland",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Temperatures plunged to minus 15 degrees Celsius as rescue efforts continued .",
+        "entities": []
+    },
+    {
+        "sentence": "Israeli troops and tanks entered the northern Gaza Strip Sunday , hours after Israel ended an operation against Palestinian militants in southern Gaza .",
+        "entities": [
+            {
+                "text": "Sunday",
+                "label": "DATE"
+            },
+            {
+                "text": "Israeli",
+                "label": "NORP"
+            },
+            {
+                "text": "northern Gaza Strip",
+                "label": "GPE"
+            },
+            {
+                "text": "Israel",
+                "label": "GPE"
+            },
+            {
+                "text": "Southern Gaza",
+                "label": "GPE"
+            },
+            {
+                "text": "Palestinians",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The Beit Hanoun operation began soon after Israeli forces withdrew from Khan Younis after a three-day assault .",
+        "entities": [
+            {
+                "text": "Beit Hanoun",
+                "label": "ORG"
+            },
+            {
+                "text": "Israeli",
+                "label": "NORP"
+            },
+            {
+                "text": "Khan Younis",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Israel says both raids were aimed at stopping militants from firing rockets and mortar shells at Israeli settlements and towns .",
+        "entities": [
+            {
+                "text": "Israel",
+                "label": "GPE"
+            },
+            {
+                "text": "Israeli",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The Israeli military actions come one week before Palestinian elections to replace the late Palestinian Authority President Yasser Arafat .",
+        "entities": [
+            {
+                "text": "Israeli",
+                "label": "NORP"
+            },
+            {
+                "text": "Palestinian",
+                "label": "NORP"
+            },
+            {
+                "text": "Authority President Yasser Arafat",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "A new opinion survey by the Palestinian Center for Policy and Survey Research shows Palestine Liberation Organization chairman Mahmoud Abbas with a 65-to-22 percent lead over his nearest rival , Mustafa Barghouti .",
+        "entities": [
+            {
+                "text": "Palestinian",
+                "label": "NORP"
+            },
+            {
+                "text": "Palestinian Center for Policy and Survey Research",
+                "label": "ORG"
+            },
+            {
+                "text": "Palestine",
+                "label": "GPE"
+            },
+            {
+                "text": "Palestine Liberation Organization",
+                "label": "ORG"
+            },
+            {
+                "text": "Israeli",
+                "label": "NORP"
+            },
+            {
+                "text": "Mahmoud Abbas",
+                "label": "PERSON"
+            },
+            {
+                "text": "Mustafa Barghouti",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Abbas has vowed to protect Palestinian militants from Israeli raids .",
+        "entities": [
+            {
+                "text": "Mr. Abbas",
+                "label": "PERSON"
+            },
+            {
+                "text": "Palestinain",
+                "label": "NORP"
+            },
+            {
+                "text": "Israeli",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "He also has criticized attacks on Israelis , saying they are not productive .",
+        "entities": [
+            {
+                "text": "Israelis",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "An auction house in Hong Kong has broken the price-per-carat record for a gemstone auctioned off , with the sale of a six-carat blue diamond at nearly $ 8 million .",
+        "entities": [
+            {
+                "text": "8 million",
+                "label": "MONEY"
+            }
+        ]
+    },
+    {
+        "sentence": "Sotheby 's of Hong Kong announced the sale Monday , noting that the price comes out to $ 1.32 million a carat .",
+        "entities": [
+            {
+                "text": "Sotheby",
+                "label": "ORG"
+            },
+            {
+                "text": "Hong Kong",
+                "label": "GPE"
+            },
+            {
+                "text": "1.32 million",
+                "label": "MONEY"
+            },
+            {
+                "text": "Monday",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "The sale bested a 20-year record held by a diamond known as the \" Hancock Red \" that fetched just over $ 9,00,000 per carat in 1987 .",
+        "entities": [
+            {
+                "text": "20-year",
+                "label": "DATE"
+            },
+            {
+                "text": "9,00,000",
+                "label": "MONEY"
+            },
+            {
+                "text": "1987",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "The buyer for the diamond is Moussaieff Jewelers , a London-based jeweler that collects rare gemstones .",
+        "entities": [
+            {
+                "text": "Moussaieff Jewelers",
+                "label": "ORG"
+            },
+            {
+                "text": "London",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The diamond is said to be in perfect condition with a rare , vivid blue color - the result of the element boron in the stone 's crystal structure .",
+        "entities": []
+    },
+    {
+        "sentence": "The Iraqi government 's top executive body , called the president 's council , has issued a controversial law that allows some former members of Saddam Hussein 's Baath Party to return to government service .",
+        "entities": [
+            {
+                "text": "Iraqi",
+                "label": "NORP"
+            },
+            {
+                "text": "Saddam Hussein",
+                "label": "PERSON"
+            },
+            {
+                "text": "Baath Party",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "The Kurdish , Jalal Talabani , and Shi'ite , Adel Abdul-Mahdi , representatives of the three-member presidency council issued the law Sunday despite the objection of the Sunni representative , Tareq al-Hashemi .",
+        "entities": [
+            {
+                "text": "Kurdish",
+                "label": "NORP"
+            },
+            {
+                "text": "Jalal Talabani",
+                "label": "PERSON"
+            },
+            {
+                "text": "Shi'ite",
+                "label": "PERSON"
+            },
+            {
+                "text": "Adel Abdul-Mahdi",
+                "label": "PERSON"
+            },
+            {
+                "text": "Sunday",
+                "label": "DATE"
+            },
+            {
+                "text": "Tareq al-Hashemi",
+                "label": "PERSON"
+            }
+            
+        ]
+    }, 
+    {
+        "sentence": "Sunni politicians say the law contains provisions that will force out many current government workers .",
+        "entities": []
+    },
+    {
+        "sentence": "The law is one of 18 pieces of so-called benchmark legislation aimed at achieving reconciliation among Iraq 's Kurdish , Sunni Arab and Shi'ite communities .",
+        "entities": [
+            {
+                "text": "Kurdish",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Meanwhile , the U.S. military says the bodies of four Iraqi militia members working with U.S. forces were recovered in Baquba Sunday .",
+        "entities": [
+            {
+                "text": "Sunday",
+                "label": "DATE"
+            },
+            {
+                "text": "U.S miltary",
+                "label": "ORG"
+            },
+            {
+                "text": "Iraqi militia",
+                "label": "ORG"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "Baquba",
+                "label": "GPE"
+            }
+
+        ]
+    },
+    {
+        "sentence": "The military also said coalition forces killed three suspected terrorists and captured 36 others in the last two days in operations in central and northern Iraq .",
+        "entities": [
+            {
+                "text": "millitary",
+                "label": "ORG"
+            },
+            {
+                "text": "northern Iraq",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Bosnian officials say DNA tests on human remains taken from mass graves have identified 50 victims of the war in Croatia in the early 1990s .",
+        "entities": [
+            {
+                "text": "Bosnian",
+                "label": "NORP"
+            },
+            {
+                "text": "Croatia",
+                "label": "GPE"
+            },
+            {
+                "text": "1900s",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Experts in Bosnian and Croatian laboratories compared the DNA with blood samples taken from more than 750 families who have reported missing relatives .",
+        "entities": [
+            {
+                "text": "Bosnian",
+                "label": "NORP"
+            },
+            {
+                "text": "Croatian",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Fifty of the samples led to positive identifications .",
+        "entities": []
+    },
+    {
+        "sentence": "A Bosnian official calls the results extraordinary .",
+        "entities": [
+            {
+                "text": "Bosnian",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The Sarajevo-based International Commission for Missing Persons runs one of the world 's most sophisticated DNA laboratories",
+        "entities": [
+            {
+                "text": "Sarajevo",
+                "label": "GPE"
+            },
+            {
+                "text": "International Commission for Missing Persons",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "The lab helped identify victims of the September 11 , 2001 terror attacks on the United States and last year 's Asian tsunami .",
+        "entities": [
+            {
+                "text": "United States",
+                "label": "GPE"
+            },
+            {
+                "text": "September 11, 2001",
+                "label": "DATE"
+            },
+            {
+                "text": "last year",
+                "label": "DATE"
+            },
+            {
+                "text": "Asian",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The United States has announced it is giving $ 40 million worth of food aid to Bangladesh , which is facing shortages after flooding and a devastating cyclone last year .",
+        "entities": [
+            {
+                "text": "United States",
+                "label": "GPE"
+            },
+            {
+                "text": "last year",
+                "label": "DATE"
+            },
+            {
+                "text": "$ 40 million",
+                "label": "MONEY"
+            },
+            {
+                "text": "Bangladesh",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "U.S. Ambassador to Bangladesh James Moriarty said Sunday in Dhaka the aid will go to school children , along with cyclone and flood victims .",
+        "entities": [
+            {
+                "text": "Sunday",
+                "label": "DATE"
+            },
+            {
+                "text": "Bangladesh",
+                "label": "GPE"
+            },
+            {
+                "text": "James Moriarty",
+                "label": "PERSON"
+            },
+            {
+                "text": "Dhaka",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Last year 's Cyclone Sidr killed an estimated 3,500 people and left another two million homeless .",
+        "entities": [
+            {
+                "text": "Last year",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "The cyclone also destroyed roughly two million tons of rice .",
+        "entities": []
+    },
+    {
+        "sentence": "The Bangladeshi government has said this year 's rice crop looks like it will be plentiful , but it is still anticipating possible rice shortages .",
+        "entities": [
+            {
+                "text": "Bangladeshi",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Bermuda enjoys the third highest per capita income in the world , more than 50 % higher than that of the US ; the average cost of a house by the mid-2000s exceeded $ 10,00,000 .",
+        "entities": [
+            {
+                "text": "Bermuda",
+                "label": "LOC"
+            },
+            {
+                "text": "US",
+                "label": "GPE"
+            },
+            {
+                "text": "mid-2000s",
+                "label": "DATE"
+            },
+            {
+                "text": "$ 10,00,000",
+                "label": "MONEY"
+            }
+        ]
+    },
+    {
+        "sentence": "Its economy is primarily based on providing financial services for international business and luxury facilities for tourists .",
+        "entities": []
+    },
+    {
+        "sentence": "A number of reinsurance companies relocated to the island following the 11 September 2001 attacks and again after Hurricane Katrina in August 2005 contributing to the expansion of an already robust international business sector .",
+        "entities": [
+            {
+                "text": "11 September 2001",
+                "label": "DATE"
+            }
+           
+        ]
+    },
+    {
+        "sentence": "Bermuda 's tourism industry - which derives over 80 % of its visitors from the US - continues to struggle but remains the island 's number two industry .",
+        "entities": [
+            {
+                "text": "Bermuda",
+                "label": "LOC"
+            },
+            {
+                "text": "US",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Most capital equipment and food must be imported .",
+        "entities": []
+    },
+    {
+        "sentence": "Bermuda 's industrial sector is largely focused on construction and agriculture is limited , with only 20 % of the land being arable .",
+        "entities": [
+            {
+                "text": "Bermuda",
+                "label": "LOC"
+            }
+        ]
+    },
+    {
+        "sentence": "The former French colony of Ubangi-Shari became the Central African Republic upon independence in 1960 .",
+        "entities": [
+            {
+                "text": "French",
+                "label": "NORP"
+            },
+            {
+                "text": "1960",
+                "label": "DATE"
+            },
+            {
+                "text": "Central African Republic",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "After three tumultuous decades of misrule - mostly by military governments - civilian rule was established in 1993 and lasted for one decade .",
+        "entities": [
+            {
+                "text": "1993",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "President Ange-Felix PATASSE 's civilian government was plagued by unrest , and in March 2003 he was deposed in a military coup led by General Francois BOZIZE , who established a transitional government .",
+        "entities": [
+            {
+                "text": "March 2003",
+                "label": "DATE"
+            },
+            {
+                "text": "Ange-Felix PATASSE",
+                "label": "DATE"
+            },
+            {
+                "text": "Francois BOZIZE",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Though the government has the tacit support of civil society groups and the main parties , a wide field of candidates contested the municipal , legislative , and presidential elections held in March and May of 2005 in which General BOZIZE was affirmed as president .",
+        "entities": [
+            {
+                "text": "March",
+                "label": "DATE"
+            },
+            {
+                "text": "May",
+                "label": "DATE"
+            },
+            {
+                "text": "2005",
+                "label": "DATE"
+            },
+            {
+                "text": "Genral BOZIZE",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "The government still does not fully control the countryside , where pockets of lawlessness persist .",
+        "entities": []
+    },
+    {
+        "sentence": "Unrest in the neighboring nations of Chad , Sudan , and the DRC continues to affect stability in the Central African Republic as well .",
+        "entities": [
+            {
+                "text": "Chad",
+                "label": "GPE"
+            },
+            {
+                "text": "Sudan",
+                "label": "GPE"
+            },
+            {
+                "text": "DRC",
+                "label": "GPE"
+            },
+            {
+                "text": "Central African Repuclic",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "The Gilbert Islands became a British protectorate in 1892 and a colony in 1915 ; they were captured by the Japanese in the Pacific War in 1941 .",
+        "entities": [
+            {
+                "text": "1892",
+                "label": "DATE"
+            },
+            {
+                "text": "1915",
+                "label": "DATE"
+            },
+            {
+                "text": "1941",
+                "label": "DATE"
+            },
+            {
+                "text": "British",
+                "label": "NORP"
+            },
+            {
+                "text": "Gilert Islands",
+                "label": "LOC"
+            },
+            {
+                "text": "Japanese",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The islands of Makin and Tarawa were the sites of major US amphibious victories over entrenched Japanese garrisons in 1943 .",
+        "entities": [
+            {
+                "text": "1943",
+                "label": "DATE"
+            },
+            {
+                "text": "Makin",
+                "label": "LOC"
+            },
+            {
+                "text": "Tarawa",
+                "label": "LOC"
+            },
+            {
+                "text": "US",
+                "label": "GPE"
+            },
+            {
+                "text": "Japanese",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The Gilbert Islands were granted self-rule by the UK in 1971 and complete independence in 1979 under the new name of Kiribati .",
+        "entities": [
+            {
+                "text": "1971",
+                "label": "DATE"
+            },
+            {
+                "text": "1979",
+                "label": "DATE"
+            },
+            {
+                "text": "Gilert Islands",
+                "label": "LOC"
+            },
+            {
+                "text": "UK",
+                "label": "GPE"
+            },
+            {
+                "text": "Kiribati",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The US relinquished all claims to the sparsely inhabited Phoenix and Line Island groups in a 1979 treaty of friendship with Kiribati .",
+        "entities": [
+            {
+                "text": "US",
+                "label": "GPE"
+            },
+            {
+                "text": "Phoenix",
+                "label": "GPE"
+            },
+            {
+                "text": "Line Island",
+                "label": "LOC"
+            },
+            {
+                "text": "1979",
+                "label": "DATE"
+            },
+            {
+                "text": "Kiribati",
+                "label": "LOC"
+            }
+        ]
+    },
+    {
+        "sentence": "Spain 's mixed capitalist economy is the 12th largest in the world , and its per capita income roughly matches that of Germany and France .",
+        "entities": [
+            {
+                "text": "France",
+                "label": "GPE"
+            },
+            {
+                "text": "Spain",
+                "label": "GPE"
+            },
+            {
+                "text": "Germany",
+                "label": "GPE"
+            },
+            {
+                "text": "France",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "However , after almost 15 years of above average GDP growth , the Spanish economy began to slow in late 2007 and entered into a recession in the second quarter of 2008 .",
+        "entities": [
+            {
+                "text": "15 years",
+                "label": "DATE"
+            },
+            {
+                "text": "2007",
+                "label": "DATE"
+            },
+            {
+                "text": "Spanish",
+                "label": "NORP"
+            },
+            {
+                "text": "2008",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "GDP contracted by 3.7 % in 2009 , ending a 16-year growth trend , and by another 0.2 % in 2010 , making Spain the last major economy to emerge from the global recession .",
+        "entities": [
+            {
+                "text": "2009",
+                "label": "DATE"
+            },
+            {
+                "text": "2010",
+                "label": "DATE"
+            },
+            {
+                "text": "Spain",
+                "label": "GPE"
+            },
+            {
+                "text": "16-year growth",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "The reversal in Spain 's economic growth reflected a significant decline in construction amid an oversupply of housing and falling consumer spending , while exports actually have begun to grow .",
+        "entities": [
+            {
+                "text": "Spain",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Government efforts to boost the economy through stimulus spending , extended unemployment benefits , and loan guarantees did not prevent a sharp rise in the unemployment rate , which rose from a low of about 8 % in 2007 to 20 % in 2010 .",
+        "entities": [
+            {
+                "text": "Government",
+                "label": "ORG"
+            },
+            {
+                "text": "2007",
+                "label": "DATE"
+            },
+            {
+                "text": "2010",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "The government budget deficit worsened from 3.8 % of GDP in 2008 to 9.2 % of GDP in 2010 , more than three times the euro-zone limit .",
+        "entities": [
+            {
+                "text": "2008",
+                "label": "DATE"
+            },
+            {
+                "text": "2010",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Spain 's large budget deficit and poor economic growth prospects have made it vulnerable to financial contagion from other highly-indebted euro zone members despite the government 's efforts to cut spending , privatize industries , and boost competitiveness through labor market reforms .",
+        "entities": [
+            {
+                "text": "Spain",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Spanish banks ' high exposure to the collapsed domestic construction and real estate market also poses a continued risk for the sector .",
+        "entities": [
+            {
+                "text": "Spanish",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The government oversaw a restructuring of the savings bank sector in 2010 , and provided some $ 15 billion in capital to various institutions .",
+        "entities": [
+            {
+                "text": "2010",
+                "label": "DATE"
+            },
+            {
+                "text": "15 billion",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Investors remain concerned that Madrid may need to bail out more troubled banks .",
+        "entities": [
+            {
+                "text": "Madrid",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The Bank of Spain , however , is seeking to boost confidence in the financial sector by pressuring banks to come clean about their losses and consolidate into stronger groups .",
+        "entities": [
+            {
+                "text": "Bank of Spain",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "A CROW in great want of food saw a Serpent asleep in a sunny nook , and flying down , greedily seized him .",
+        "entities": [
+            {
+                "text": "CROW",
+                "label": "PERSON"
+            },
+            {
+                "text": "Serpent",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "The Serpent , turning about , bit the Crow with a mortal wound .",
+        "entities": [
+            {
+                "text": "The Serpent",
+                "label": "PERSON"
+            },
+            {
+                "text": "Crow",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "In the agony of death , the bird exclaimed :",
+        "entities": []
+    },
+    {
+        "sentence": "\" O unhappy me ! who have found in that which I deemed a happy windfall the source of my destruction . \"",
+        "entities": []
+    },
+    {
+        "sentence": "AT ONE TIME the Horse had the plain entirely to himself .",
+        "entities": []
+    },
+    {
+        "sentence": "Then a Stag intruded into his domain and shared his pasture .",
+        "entities": [
+            {
+                "text": "Stag",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "The Horse , desiring to revenge himself on the stranger , asked a man if he were willing to help him in punishing the Stag .",
+        "entities": [
+            {
+                "text": "The Horse",
+                "label": "PERSON"
+            },
+            {
+                "text": "Stag",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "The man replied that if the Horse would receive a bit in his mouth and agree to carry him , he would contrive effective weapons against the Stag .",
+        "entities": [
+            {
+                "text": "Stag",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "The Horse consented and allowed the man to mount him .",
+        "entities": [
+            {
+                "text": "The Horse",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "From that hour he found that instead of obtaining revenge on the Stag , he had enslaved himself to the service of man .",
+        "entities": [
+            {
+                "text": "Stag",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "THE people of Madagonia had an antipathy to the people of Novakatka and set upon some sailors of a Novakatkan vessel , killing two and wounding twelve .",
+        "entities": [
+            {
+                "text": "Madagonia",
+                "label": "GPE"
+            },
+            {
+                "text": "Novakatka",
+                "label": "GPE"
+            },
+            {
+                "text": "Novakatkan",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The King of Madagonia having refused either to apologise or pay , the King of Novakatka made war upon him , saying that it was necessary to show that Novakatkans must not be slaughtered .",
+        "entities": [
+            {
+                "text": "The King of Madagonia",
+                "label": "PERSON"
+            },
+            {
+                "text": "King of Novakatka",
+                "label": "PERSON"
+            },
+            {
+                "text": "Novakatkans",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "In the battles which ensued the people of Madagonia slaughtered two thousand Novakatkans and wounded twelve thousand .",
+        "entities": [
+            {
+                "text": "Madagonia",
+                "label": "GPE"
+            },
+            {
+                "text": "Novakatkans",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "But the Madagonians were unsuccessful , which so chagrined them that never thereafter in all their land was a Novakatkan secure in property or life .",
+        "entities": [
+            {
+                "text": "Madagonians",
+                "label": "NORP"
+            },
+            {
+                "text": "Novakatkan",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Softball is better than baseball because you do n't have to watch your team lose for NINE innings .",
+        "entities": []
+    },
+    {
+        "sentence": "Ukraine 's Supreme Court has halted official publication of the results of the December 26 presidential election .",
+        "entities": [
+            {
+                "text": "Ukraine",
+                "label": "GPE"
+            },
+            {
+                "text": "Supreme Court",
+                "label": "ORG"
+            },
+            {
+                "text": "December 26",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "The high court announced Tuesday it must first review an appeal from former Prime Minister Viktor Yanukovych , who officials say lost the race to opposition leader Viktor Yushchenko .",
+        "entities": [
+            {
+                "text": "Tuesday",
+                "label": "DATE"
+            },
+            {
+                "text": "Prime Minister Viktor Yanukovych",
+                "label": "PERSON"
+            },
+            {
+                "text": "Viktor Yushchenko",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "The results must be printed in two government newspapers before the winner can be inaugurated .",
+        "entities": []
+    },
+    {
+        "sentence": "Election officials say Mr. Yushchenko garnered 52 percent support in the court-ordered repeat election , over Mr. Yanukovych 's 44 percent .",
+        "entities": [
+            {
+                "text": "Mr. Yushchenko",
+                "label": "PERSON"
+            },
+            {
+                "text": "Mr. Yanukovych",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "The former prime minister is alleging widespread fraud in the hotly contested race , and has filed a number of complaints with the Supreme Court and electoral officials .",
+        "entities": [
+            {
+                "text": "Supreme Court",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "The December election replaced a November run-off that the high court said was rigged in favor of Mr. Yanukovych .",
+        "entities": [
+            {
+                "text": "December",
+                "label": "DATE"
+            },
+            {
+                "text": "Mr. Yanukovych",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Top officials with the Organization for Security and Cooperation in Europe have congratulated Mr. Yushchenko on the election .",
+        "entities": [
+            {
+                "text": "Organization for Security and Cooperation",
+                "label": "ORG"
+            },
+            {
+                "text": "Europe",
+                "label": "GPE"
+            },
+            {
+                "text": "Mr. Yushchenko",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "The child molestation trial of pop star Michael Jackson is set to begin in southern California .",
+        "entities": [
+            {
+                "text": "Michael Jackson",
+                "label": "PERSON"
+            },
+            {
+                "text": "southern California",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Lawyers are expected to begin screening the first of as many as 750 potential jurors at a Santa Barbara county court Monday for the trial that could last several months .",
+        "entities": [
+            {
+                "text": "Monday",
+                "label": "DATE"
+            },
+            {
+                "text": "Santa Barbara",
+                "label": "GPE"
+            },
+            {
+                "text": "several months",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Jackson faces 10 charges involving a child under the age of 14 .",
+        "entities": [
+            {
+                "text": "Mr. Jackson",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "He has pleaded not guilty , saying he is completely innocent .",
+        "entities": []
+    },
+    {
+        "sentence": "In a court-approved video statement Sunday , Mr. Jackson criticized recent leaks of grand jury testimony on the case , calling them \" malicious , disgusting and FALSE . \"",
+        "entities": [
+            {
+                "text": "Mr. Jackson",
+                "label": "PERSON"
+            },
+            {
+                "text": "Sunday",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Grand jury testimony , although secret and not publicly released , is often leaked to the media .",
+        "entities": []
+    },
+    {
+        "sentence": "Russia 's President Vladimir Putin has made more harsh comments about the Bush administration , accusing it of using what he calls a \" nonexistent Russian threat \" to get more defense spending from Congress .",
+        "entities": [
+            {
+                "text": "Russia",
+                "label": "GPE"
+            },
+            {
+                "text": "Vladimir Putin",
+                "label": "PERSON"
+            },
+            {
+                "text": "Bush",
+                "label": "PERSON"
+            },
+            {
+                "text": "Russian",
+                "label": "NORP"
+            },
+            {
+                "text": "Congress",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Putin said during a visit to Jordan Tuesday that the administration has used the \" Russian card \" to address its political problems , including the wars in Iraq and Afghanistan , and for the deployment of a missile defense system .",
+        "entities": [
+            {
+                "text": "Tuesday",
+                "label": "DATE"
+            },
+            {
+                "text": "Mr. Putin",
+                "label": "PERSON"
+            },
+            {
+                "text": "Jordan",
+                "label": "GPE"
+            },
+            {
+                "text": "Russian",
+                "label": "NORP"
+            },
+            {
+                "text": "Iraq",
+                "label": "GPE"
+            },
+            {
+                "text": "Afghanistan",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "He said he only expressed what many other countries also believe , when he complained last week about what he described as the almost uncontained use of U.S. military force .",
+        "entities": [
+            {
+                "text": "U.S",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "The White House called his remarks disappointing .",
+        "entities": [
+            {
+                "text": "The White House",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "Last week , U.S. Defense Secretary Robert Gates spoke to a congressional committee and identified Russia as a potential threat .",
+        "entities": [
+            {
+                "text": "Robert Gates",
+                "label": "PERSON"
+            },
+            {
+                "text": "U.S Defense Secretary",
+                "label": "ORG"
+            },
+            {
+                "text": "Russia",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Two armed Pakistani inmates were holed up in Afghanistan 's main prison Friday , after an escape attempt that left at least five people dead .",
+        "entities": [
+            {
+                "text": "Friday",
+                "label": "DATE"
+            },
+            {
+                "text": "Pakistani",
+                "label": "GPE"
+            },
+            {
+                "text": "Afghanistan's",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The head of the Pul-i-Charki prison in the Afghan capital , Kabul , says four inmates linked to the al-Qaida terrorist network began the uprising Friday .",
+        "entities": [
+            {
+                "text": "al-Qaida",
+                "label": "ORG"
+            },
+            {
+                "text": "Pul-i-Charki",
+                "label": "PERSON"
+            },
+            {
+                "text": "Afghan",
+                "label": "NORP"
+            },
+            {
+                "text": "Kabul",
+                "label": "GPE"
+            },
+            {
+                "text": "Friday",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "The four men , identified as one Iraqi and three Pakistanis , overpowered and killed a prison guard and seized his rifle , then killed two more guards .",
+        "entities": [
+            {
+                "text": "Iraqi",
+                "label": "NORP"
+            },
+            {
+                "text": "Pakistanis",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Two of the original four prisoners died in a shootout .",
+        "entities": []
+    },
+    {
+        "sentence": "Reports from the scene say a shootout has been under way between the remaining two inmates and security forces surrounding the prison .",
+        "entities": []
+    },
+    {
+        "sentence": "The prison , on the outskirts of Kabul , is used to house inmates held for criminal offenses .",
+        "entities": [
+            {
+                "text": "Kabul",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "It is separate from detention facilities operated by the United States to house captured Taliban and al-Qaida fighters .",
+        "entities": [
+            {
+                "text": "United States",
+                "label": "GPE"
+            },
+            {
+                "text": "al-Qaida",
+                "label": "ORG"
+            },
+            {
+                "text": "Taliban",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "Iran 's intelligence minister says authorities have arrested members of a group which allegedly carried out an attack in northwestern Iran on Wednesday that killed 12 people .",
+        "entities": [
+            {
+                "text": "Iran",
+                "label": "GPE"
+            },
+            {
+                "text": "Wednesday",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Heidar Moslehi did not publicly identify the group Thursday .",
+        "entities": [
+            {
+                "text": "Thursday",
+                "label": "DATE"
+            },
+            {
+                "text": "Heidar Moslehi",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "However , he said those responsible for what he called \" this terrorist attack \" had targeted \" unity \" between Shi'ites and Sunnis in the region .",
+        "entities": [
+            {
+                "text": "Shi'ites",
+                "label": "NORP"
+            },
+            {
+                "text": "Sunnis",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The bombing in the town of Mahabad came during a military parade marking the 30th anniversary of the start of the Iran-Iraq War .",
+        "entities": [
+            {
+                "text": "Mahabad",
+                "label": "GPE"
+            },
+            {
+                "text": "Iran",
+                "label": "GPE"
+            },
+            {
+                "text": "Iraq",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Officials say at least 70 others were injured in the blast .",
+        "entities": []
+    },
+    {
+        "sentence": "No group has claimed responsibility .",
+        "entities": []
+    },
+    {
+        "sentence": "Local officials blamed Kurdish separatists .",
+        "entities": [
+            {
+                "text": "Kurdish",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "But a leading Kurdish faction condemned the bombing .",
+        "entities": [
+            {
+                "text": "Kurdish",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Former Iranian President Akbar Hashemi Rafsanjani is in Iraq for talks on boosting political , religious and economic ties .",
+        "entities": [
+            {
+                "text": "Iranian",
+                "label": "NORP"
+            },
+            {
+                "text": "Akbar Hashemi Rafsanjani",
+                "label": "PERSON"
+            },
+            {
+                "text": "Iraq",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Rafsanjani , who heads the influential Expediency Council , arrived Monday in Baghdad and met with Iraqi President Jalal Talabani .",
+        "entities": [
+            {
+                "text": "Monday",
+                "label": "DATE"
+            },
+            {
+                "text": "Mr. Rafsanjani",
+                "label": "PERSON"
+            },
+            {
+                "text": "Expediency Council",
+                "label": "ORG"
+            },
+            {
+                "text": "Monday",
+                "label": "DATE"
+            },
+            {
+                "text": "Bahdad",
+                "label": "GPE"
+            },
+            {
+                "text": "Iraqi",
+                "label": "NORP"
+            },
+            {
+                "text": "Jalal Talabani",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Talabani was in Iran last week , as the two former foes rebuild their ties following the ouster of Iranian arch-rival , former Iraqi President Saddam Hussein .",
+        "entities": [
+            {
+                "text": "Mr. Talabani",
+                "label": "PERSON"
+            },
+            {
+                "text": "Iranian",
+                "label": "NORP"
+            },
+            {
+                "text": "Iraqi",
+                "label": "NORP"
+            },
+            {
+                "text": "Saddam Hussein",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Talabani was seeking Iranian investment in his country , devastated in the years since the U.S.-led invasion in 2003 .",
+        "entities": [
+            {
+                "text": "2003",
+                "label": "DATE"
+            },
+            {
+                "text": "Mr. Talabani",
+                "label": "PERSON"
+            },
+            {
+                "text": "Kurdish",
+                "label": "NORP"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "Iranian",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Washington has expressed concern about increasing ties between the two Shi'ite-majority neighbors .",
+        "entities": [
+            {
+                "text": "Washington",
+                "label": "PERSON"
+            },
+            {
+                "text": "Shi'ite",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "It has accused Tehran of supporting anti-U.S. militants in Iraq , a charge Iran denies .",
+        "entities": [
+            {
+                "text": "Tehran",
+                "label": "PERSON"
+            },
+            {
+                "text": "Iran",
+                "label": "GPE"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "About 7,000 Hamas supporters have held a rally in Gaza City to mark the anniversary of the assassination of the group 's founder and send a warning to Israel .",
+        "entities": [
+            {
+                "text": "Hamas",
+                "label": "ORG"
+            },
+            {
+                "text": "Gaza City",
+                "label": "GPE"
+            },
+            {
+                "text": "Israel",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Hamas spiritual leader Sheikh Ahmed Yassin was killed in an Israeli air strike March 22 , last year .",
+        "entities": [
+            {
+                "text": "Hamas",
+                "label": "ORG"
+            },
+            {
+                "text": "last year",
+                "label": "DATE"
+            },
+            {
+                "text": "March 22",
+                "label": "DATE"
+            },
+            {
+                "text": "Sheikh Ahmed Yassin",
+                "label": "PERSON"
+            },
+            {
+                "text": "Israeli",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Hamas leaders Friday vowed to resume attacks on Israel unless it accepts their demands for prisoner releases and other concessions .",
+        "entities": [
+            {
+                "text": "Hamas",
+                "label": "ORG"
+            },
+            {
+                "text": "Friday",
+                "label": "DATE"
+            },
+            {
+                "text": "Israel",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "A top Hamas official said he would participate in cease-fire talks scheduled next week in Egypt , but has not decided on whether the group will sign an agreement .",
+        "entities": [
+            {
+                "text": "Hamas",
+                "label": "ORG"
+            },
+            {
+                "text": "Egypt",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Some palestinian militants have been observing a \" cooling off \" period with Israel that was agreed to during a recent summit in Sharm el-Sheik , Egypt .",
+        "entities": [
+            {
+                "text": "Palestinian",
+                "label": "NORP"
+            },
+            {
+                "text": "Israel",
+                "label": "GPE"
+            },
+            {
+                "text": "Sharm el-Sheik, Egypt",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "India and Sri Lanka say peace talks with Tamil rebels should resume early in order to prevent the island nation from plunging back into civil war .",
+        "entities": [
+            {
+                "text": "India",
+                "label": "GPE"
+            },
+            {
+                "text": "Sri lanka",
+                "label": "GPE"
+            },
+            {
+                "text": "Tamil",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The call was made after visiting Sri Lankan President Mahinda Rajapakse met with Indian Prime Minister Manmohan Singh and briefed him about his government 's efforts to restart peace talks with Tamil Tiger rebels .",
+        "entities": [
+            {
+                "text": "Sri Lankan",
+                "label": "NORP"
+            },
+            {
+                "text": "Mahinda Rajapkse",
+                "label": "PERSON"
+            },
+            {
+                "text": "Indian",
+                "label": "NORP"
+            },
+            {
+                "text": "Manmohan Singh",
+                "label": "PERSON"
+            },
+            {
+                "text": "Tamil Tiger",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "An Indian spokesman said both countries agreed about the need to strengthen the almost three-year-old ceasefire , which is becoming fragile .",
+        "entities": [
+            {
+                "text": "Indian",
+                "label": "NORP"
+            },
+            {
+                "text": "three-year-old",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Both the Tigers and the Sri Lankan government have agreed to hold talks , but the government insists they must take place in an Asian country , while the rebels want to hold them in Norway , which brokered a 2002 truce .",
+        "entities": [
+            {
+                "text": "2002",
+                "label": "DATE"
+            },
+            {
+                "text": "Sri Lankan",
+                "label": "NORP"
+            },
+            {
+                "text": "Tigers",
+                "label": "ORG"
+            },
+            {
+                "text": "Norway",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "In New Delhi , Mr. Rajapakse is also holding talks on enhancing economic cooperation and trade relations with India .",
+        "entities": [
+            {
+                "text": "New Delhi",
+                "label": "GPE"
+            },
+            {
+                "text": "Mr. Rajapkse",
+                "label": "PERSON"
+            },
+            {
+                "text": "India",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "United Nations humanitarian agencies say they are searching for a new route into southern Lebanon to help war refugees , after Israel imposed an indefinite ban on movement in the region .",
+        "entities": [
+            {
+                "text": "United Nations",
+                "label": "ORG"
+            },
+            {
+                "text": "southern Lebanon",
+                "label": "GPE"
+            },
+            {
+                "text": "Israel",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "A spokeswoman for the U.N. World Food Program , Christiane Berthiaume , said Tuesday relief agencies are looking for alternative ways to provide aid to Lebanese civilians cut off by heavy fighting .",
+        "entities": [
+            {
+                "text": "Tuesday",
+                "label": "DATE"
+            },
+            {
+                "text": "U.n World Food Program",
+                "label": "ORG"
+            },
+            {
+                "text": "Christiane Berthiaume",
+                "label": "PERSON"
+            },
+            {
+                "text": "Lebanese",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Aid officials say road transport is too dangerous after the Israeli military warned it would strike any vehicle traveling south of the Litani River on suspicion of transporting weapons .",
+        "entities": [
+            {
+                "text": "Israeli",
+                "label": "NORP"
+            },
+            {
+                "text": "Litani River",
+                "label": "LOC"
+            }
+        ]
+    },
+    {
+        "sentence": "The U.N. spokeswoman said there are hundreds of thousands of people who need aid in Lebanon .",
+        "entities": [
+            {
+                "text": "U.N",
+                "label": "ORG"
+            },
+            {
+                "text": "Lebanon",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The World Food Program has brought 404 tons of food into the region , but she said that is not enough .",
+        "entities": [
+            {
+                "text": "World Food Program",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "The U.N. human rights chief says Sudanese authorities are restricting press freedoms and making arbitrary arrests , as a referendum approaches on the independence of south Sudan .",
+        "entities": [
+            {
+                "text": "U.N",
+                "label": "ORG"
+            },
+            {
+                "text": "Sudan",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Navi Pillay said it is important the referendum is free and fair , calling it a critical moment in Sudan 's history .",
+        "entities": [
+            {
+                "text": "Navi Pillay",
+                "label": "PERSON"
+            },
+            {
+                "text": "Sudan's",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "She urged the governments of Sudan and south Sudan to quickly halt efforts to intimidate voters or taint the result of the referendum , which begins on Sunday .",
+        "entities": [
+            {
+                "text": "Sunday",
+                "label": "DATE"
+            },
+            {
+                "text": "Sudan",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Nearly 4 million southern Sudanese are registered to vote in the referendum , which will allow voters to secede or remain united with the north .",
+        "entities": [
+            {
+                "text": "Sudanese",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The vote is expected to split Africa 's largest country in two .",
+        "entities": [
+            {
+                "text": "Africa's",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The referendum is the centerpiece of the 2005 peace deal that ended Sudan 's north-south civil war .",
+        "entities": [
+            {
+                "text": "2005",
+                "label": "DATE"
+            },
+            {
+                "text": "Sudan",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "U.S. President George Bush Tuesday thanked troops who are back from Iraq and Afghanistan , where he said , thanks to their sacrifices , \" the forces of freedom and liberty will prevail . \"",
+        "entities": [
+            {
+                "text": "Tuesday",
+                "label": "DATE"
+            },
+            {
+                "text": "George Bush",
+                "label": "PERSON"
+            },
+            {
+                "text": "Iraq",
+                "label": "GPE"
+            },
+            {
+                "text": "Afghanistan",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Bush addressed about 7,500 military personnel at Fort Campbell , in the central U.S. state of Kentucky two days before the Thanksgiving Day holiday .",
+        "entities": [
+            {
+                "text": "Mr. Bush",
+                "label": "GPE"
+            },
+            {
+                "text": "Fort Campbell",
+                "label": "LOC"
+            },
+            {
+                "text": "Central U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "Kentucky",
+                "label": "GPE"
+            },
+            {
+                "text": "two days",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "About 10,000 Fort Campbell troops have returned from the wars in Afghanistan and Iraq since October .",
+        "entities": [
+            {
+                "text": "Fort Campbell",
+                "label": "LOC"
+            },
+            {
+                "text": "Afghanistan",
+                "label": "GPE"
+            },
+            {
+                "text": "Iraq",
+                "label": "GPE"
+            },
+            {
+                "text": "October",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Others troops are scheduled to depart for the regions in the coming week .",
+        "entities": [
+            {
+                "text": "week",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Bush told the men and women that they have earned the thanks of every American for a \" job well done . \"",
+        "entities": [
+            {
+                "text": "Mr. Bush",
+                "label": "PERSON"
+            },
+            {
+                "text": "American",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "He credited the troops with taking the fight against terrorism overseas so that Americans do not have to face the threat at home .",
+        "entities": [
+            {
+                "text": "Americans",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "A senior Afghan intelligence official says a military aircraft crashed in the country 's northern region Thursday .",
+        "entities": [
+            {
+                "text": "Thursday",
+                "label": "DATE"
+            },
+            {
+                "text": "Afghan",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Provincial intelligence chief Abdul Majid Azimi says the aircraft went down in the mountains of Afghanistan 's Baghlan province .",
+        "entities": [
+            {
+                "text": "Abdul Majid Azimi",
+                "label": "PERSON"
+            },
+            {
+                "text": "Afghanistan",
+                "label": "GPE"
+            },
+            {
+                "text": "Baghlan",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "He says it is unclear if the aircraft involved is a helicopter or a plane or to whom it belonged .",
+        "entities": []
+    },
+    {
+        "sentence": "A spokesman for NATO 's international coalition in Afghanistan ( International Security Assistance Force or ISAF ) says there were no immediate reports of a crash involving any of its aircraft .",
+        "entities": [
+            {
+                "text": "NATO",
+                "label": "ORG"
+            },
+            {
+                "text": "Afghanistan",
+                "label": "GPE"
+            },
+            {
+                "text": "International Security Assistance Force or ISAF",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "British anti-terror police have arrested six Muslim men in a series of London raids , on suspicion of raising funds for terrorists and inciting others to commit acts of terrorism .",
+        "entities": [
+            {
+                "text": "British",
+                "label": "NORP"
+            },
+            {
+                "text": "Muslim",
+                "label": "NORP"
+            },
+            {
+                "text": "London",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "One of the suspects , identified as radical Muslim Abu Izzadeen , was widely known in Britain for heckling Home Secretary John Reid last year in a televised public meeting .",
+        "entities": [
+            {
+                "text": "last year",
+                "label": "DATE"
+            },
+            {
+                "text": "Abu Izzadeen",
+                "label": "PERSON"
+            },
+            {
+                "text": "Muslim",
+                "label": "NORP"
+            },
+            {
+                "text": "Britain",
+                "label": "GPE"
+            },
+            {
+                "text": "John Reid",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "A spokesman , Anjem Choudary , for the banned Islamic militant group al-Ghurabaa confirmed Izzadeen 's arrest Tuesday .",
+        "entities": [
+            {
+                "text": "Tuesday",
+                "label": "DATE"
+            },
+            {
+                "text": "Anjem Choudary",
+                "label": "PERSON"
+            },
+            {
+                "text": "Islamic",
+                "label": "NORP"
+            },
+            {
+                "text": "al-Ghurabaa",
+                "label": "ORG"
+            },
+            {
+                "text": "Izzaden",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Izzadeen , a Muslim convert and former electrician , was arrested and released on bail earlier this year in a separate case alleging that he encouraged terrorism .",
+        "entities": [
+            {
+                "text": "Izzadeen",
+                "label": "PERSON"
+            },
+            {
+                "text": "Muslim",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Police say the suspects , aged between 21 and 35 , are in custody at a London police precinct .",
+        "entities": [
+            {
+                "text": "Police",
+                "label": "ORG"
+            },
+            {
+                "text": "London",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Authorities also say other searches in connection with the probe are ongoing .",
+        "entities": []
+    },
+    {
+        "sentence": "Turkish officials say three people were killed Wednesday at a publishing house that printed Bibles .",
+        "entities": [
+            {
+                "text": "Wednesday",
+                "label": "DATE"
+            },
+            {
+                "text": "Turkish",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "They say the attackers slit the throats of the victims at the Zirve publishing house in the city of Malatya .",
+        "entities": [
+            {
+                "text": "Malayta",
+                "label": "GPE"
+            },
+            {
+                "text": "Zirve",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "A fourth person was injured when he jumped out of window to escape .",
+        "entities": []
+    },
+    {
+        "sentence": "The publisher had received threats for printing Bibles .",
+        "entities": []
+    },
+    {
+        "sentence": "Officials say police are questioning several people in relation to the attack .",
+        "entities": []
+    },
+    {
+        "sentence": "Turkish television showed police wrestling a man to the ground outside the building .",
+        "entities": [
+            {
+                "text": "Turkish",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The attack is the latest on Turkey 's small Christian minority .",
+        "entities": [
+            {
+                "text": "Turkey",
+                "label": "GPE"
+            },
+            {
+                "text": "Christian",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Last year , a Catholic priest was shot and killed in the Black Sea city of Trabzon .",
+        "entities": [
+            {
+                "text": "Last year",
+                "label": "DATE"
+            },
+            {
+                "text": "Catholic",
+                "label": "NORP"
+            },
+            {
+                "text": "Black Sea",
+                "label": "LOC"
+            },
+            {
+                "text": "Trabzon",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Police in Chad Tuesday killed at least one person when they opened fire on a protest by wounded soldiers demanding better medical care .",
+        "entities": [
+            {
+                "text": "Tuesday",
+                "label": "DATE"
+            },
+            {
+                "text": "Police",
+                "label": "ORG"
+            },
+            {
+                "text": "Chad",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "A Defense Ministry official , Blabague Marboulaye , said Wednesday that the soldiers were demonstrating in front of a military hospital in the capital , N'Djamena .",
+        "entities": [
+            {
+                "text": "Wednesday",
+                "label": "DATE"
+            },
+            {
+                "text": "Blabague Marboulaye",
+                "label": "PERSON"
+            },
+            {
+                "text": "N'Djamena",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The official said the troops were disruptive and that the protests had been infiltrated by civilians who wanted to benefit from health services .",
+        "entities": []
+    },
+    {
+        "sentence": "Police were called in to disperse the protest , making several arrests in addition to shooting the demonstrator .",
+        "entities": [
+            {
+                "text": "Police",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "Officials say the protests had interrupted operations at the hospital , but calm has been restored at the facility .",
+        "entities": []
+    },
+    {
+        "sentence": "The troops were wounded in combat against rebels in eastern Chad .",
+        "entities": [
+            {
+                "text": "Chad",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The rebels have waged a low-intensity war against the government of President Idriss Deby for the past year .",
+        "entities": [
+            {
+                "text": "Idriss Deby",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Separatist politicians from Indian Kashmir are making an unprecedented trip to Pakistani Kashmir for talks on the disputed region 's future .",
+        "entities": [
+            {
+                "text": "Indian Kashmir",
+                "label": "GPE"
+            },
+            {
+                "text": "Pakistani Kashmir",
+                "label": "GPE"
+            }
+            
+        ]
+    },
+    {
+        "sentence": "The officials from Indian Kashmir 's main separatist political alliance , the All Parties Hurriyat Conference , are using the recently launched bus service between the two regions .",
+        "entities": [
+            {
+                "text": "Indian Kashmir",
+                "label": "GPE"
+            },
+            {
+                "text": "All Parties Hurriyat Conference",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "They plan to meet with leaders of Pakistani Kashmir and Pakistan-based rebel groups which have been involved in a violent insurgency in Indian Kashmir for the past 15 years .",
+        "entities": [
+            {
+                "text": "Pakistani Kashmir",
+                "label": "ORG"
+            },
+            {
+                "text": "Pakistan",
+                "label": "GPE"
+            },
+            {
+                "text": "15 years",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "The Hurriyat alliance seeks an independent Kashmir .",
+        "entities": [
+            {
+                "text": "Hurriyat",
+                "label": "ORG"
+            },
+            {
+                "text": "Kashmir",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "But its hard-line pro-Pakistani splinter group has rejected the invitation , accusing Islamabad of diluting its stand over Kashmir and appeasing New Delhi .",
+        "entities": [
+            {
+                "text": "Pakistani",
+                "label": "NORP"
+            },
+            {
+                "text": "New Delhi",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "India has previously denied permission to Hurriyat leaders to visit Pakistan , saying the Kashmir dispute is India 's internal matter .",
+        "entities": [
+            {
+                "text": "India",
+                "label": "GPE"
+            },
+            {
+                "text": "Hurriyat",
+                "label": "ORG"
+            },
+            {
+                "text": "Pakistan",
+                "label": "GPE"
+            },
+            {
+                "text": "Kashmir",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The United Nations has condemned alleged abuses by American forces in Afghanistan , calling them \" totally unacceptable \" .",
+        "entities": [
+            {
+                "text": "United Nations",
+                "label": "ORG"
+            },
+            {
+                "text": "American",
+                "label": "NORP"
+            },
+            {
+                "text": "Afghanistan",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Asked about a report that U.S. troops allegedly burned the bodies of two Taleban fighters to taunt other fighters , a U.N. spokesman said such abuses are an affront to the work of the international community in Afghanistan .",
+        "entities": [
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "Taleban",
+                "label": "ORG"
+            },
+            {
+                "text": "U.N",
+                "label": "ORG"
+            },
+            {
+                "text": "Afghanistan",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The United Nations issued a similar statement in May amid claims of abuses of Afghan prisoners by U.S. forces .",
+        "entities": [
+            {
+                "text": "United Nations",
+                "label": "ORG"
+            },
+            {
+                "text": "Afghan",
+                "label": "NORP"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Afghan President Hamid Karzai has also condemned the purported burning incident and ordered an inquiry .",
+        "entities": [
+            {
+                "text": "Afghan",
+                "label": "GPE"
+            },
+            {
+                "text": "Hamid Karzai",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "U.S. Defense Secretary Donald Rumsfeld said the alleged actions do not represent the overwhelmingly positive behavior of the U.S. military , adding he wants the U.S. military in Afghanistan to accelerate its own investigation .",
+        "entities": [
+            {
+                "text": "U.S Defense Secretary",
+                "label": "ORG"
+            },
+            {
+                "text": "Donald Rumsfeld",
+                "label": "PERSON"
+            },
+            {
+                "text": "Afghanistan",
+                "label": "GPE"
+            },
+             {
+                "text": "U.S",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The U.S. military in Afghanistan says two American soldiers have been charged with assaulting detainees at a coalition base in Uruzgan province .",
+        "entities": [
+            {
+                "text": "Afghanistan",
+                "label": "GPE"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "American",
+                "label": "NORP"
+            },
+            {
+                "text": "Uruzgan",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "A statement says the two soldiers allegedly punched two detainees on the chest , shoulders and stomach , but that neither detainee required medical attention .",
+        "entities": []
+    },
+    {
+        "sentence": "The charges come 10 days after the U.S. military began an investigation into allegations that American soldiers burned the bodies of two Taleban fighters and used the act to taunt other fighters .",
+        "entities": [
+            {
+                "text": "10 days",
+                "label": "DATE"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "American",
+                "label": "NORP"
+            },
+            {
+                "text": "Taleban",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "Australian television aired a video purportedly showing the soldiers burning the bodies of the fighters they had killed near the former Taleban stronghold of Kandahar .",
+        "entities": [
+            {
+                "text": "Australian",
+                "label": "NORP"
+            },
+            {
+                "text": "Taleban",
+                "label": "GPE"
+            },
+            {
+                "text": "Kandahar",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Cremation of corpses is banned in the Islamic faith and the alleged desecration sparked outrage in Afghanistan .",
+        "entities": [
+            {
+                "text": "Islamic",
+                "label": "NORP"
+            },
+            {
+                "text": "Afghanistan",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "A top U.S. official says \" uncertainties \" about how China will use its increasing power may inhibit its relations with other countries , including the United States .",
+        "entities": [
+            {
+                "text": "United States",
+                "label": "GPE"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "China",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Deputy Secretary of State Robert Zoellick addressed the National Committee on U.S. - China Relations Wednesday in New York .",
+        "entities": [
+            {
+                "text": "Wednesday",
+                "label": "DATE"
+            },
+            {
+                "text": "Robert Zoellick",
+                "label": "PERSON"
+            },
+            {
+                "text": "Deputy Secretary of State",
+                "label": "ORG"
+            },
+            {
+                "text": "National Committee",
+                "label": "ORG"
+            },
+            {
+                "text": "China",
+                "label": "GPE"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "New York",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Zoellick praised the \" constructive role \" China played in hosting the recent six-party talks on North Korea 's nuclear program .",
+        "entities": [
+            {
+                "text": "Mr. Zoellick",
+                "label": "PERSON"
+            },
+            {
+                "text": "China",
+                "label": "GPE"
+            },
+            {
+                "text": "North Korea's",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "But he also encouraged China to be a responsible stakeholder in global affairs .",
+        "entities": [
+            {
+                "text": "China",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "He said Beijing 's \" lack of transparency \" raises questions about the purpose of China 's rapid military modernization On trade , Mr. Zoellick said China should not take for granted its access to the U.S. market .",
+        "entities": [
+            {
+                "text": "Beijing",
+                "label": "GPE"
+            },
+            {
+                "text": "China",
+                "label": "GPE"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "Mr. Zoellick",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "On democracy issues , Mr. Zoellick said China 's closed political system is \" simply not sustainable . \"",
+        "entities": [
+            {
+                "text": "China",
+                "label": "GPE"
+            },
+            {
+                "text": "Mr. Zoellick",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "He said as economic growth continues , the Chinese people will want a greater say in their future .",
+        "entities": [
+            {
+                "text": "Chinese",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "The Egyptian Health Ministry says a 15-year-old girl has died of bird flu , the second such death in as many days .",
+        "entities": [
+            {
+                "text": "Egyptian",
+                "label": "NORP"
+            },
+            {
+                "text": "15-year-old",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "The ministry says the girl died Monday after contracting the deadly H5N1 strain of bird flu .",
+        "entities": [
+            {
+                "text": "Monday",
+                "label": "DATE"
+            },
+            {
+                "text": "H5N1",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "The girl was apparently from the same family as a 30-year-old woman who died of bird flu on Sunday .",
+        "entities": [
+            {
+                "text": "Sunday",
+                "label": "DATE"
+            },
+            {
+                "text": "30-year-old",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Two members of the woman 's family had also been diagnosed with bird flu .",
+        "entities": []
+    },
+    {
+        "sentence": "A regional official of the World Health Organization said the woman had been hospitalized in mid-December but was only tested for the deadly form of the flu in the last few days .",
+        "entities": [
+            {
+                "text": "Health Organization",
+                "label": "ORG"
+            },
+            {
+                "text": "mid-December",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "He said she initially did not tell health officials that she lived in close contact with ducks .",
+        "entities": []
+    },
+    {
+        "sentence": "Nine Egyptians have now died from bird flu since it was first detected in Egyptian poultry in February .",
+        "entities": [
+            {
+                "text": "Egyptians",
+                "label": "NORP"
+            },
+            {
+                "text": "February",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Many poor Egyptians live in close contact with chickens and ducks that they raise for their own consumption .",
+        "entities": [
+            {
+                "text": "Egyptians",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The U.S. military is denying a report that Saddam Hussein has begun a jailhouse hunger strike , and says the ousted Iraqi leader had eaten on Sunday .",
+        "entities": [
+            {
+                "text": "Sunday",
+                "label": "DATE"
+            },
+            {
+                "text": "Saddam Hussein",
+                "label": "PERSON"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "Iraqi",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "A lawyer for Iraq 's former deputy prime minister Tariq Aziz said earlier that Saddam Hussein and other detainees had stopped eating .",
+        "entities": [
+            {
+                "text": "Iraq",
+                "label": "GPE"
+            },
+            {
+                "text": "Tari Aziz",
+                "label": "PERSON"
+            },
+            {
+                "text": "Saddam Hussein",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "Monday is the first anniversary of Saddam 's capture by U.S. forces .",
+        "entities": [
+            {
+                "text": "Monday",
+                "label": "DATE"
+            },
+            {
+                "text": "Saddam",
+                "label": "PERSON"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "A U.S. spokesman said authorities are checking reports that others in a group of 11 high-profile detainees in U.S. custody may be rejecting some meals .",
+        "entities": [
+            {
+                "text": "U.S",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Meanwhile , the U.S. military says a U.S. Marine was killed in action west of Baghdad Sunday in Anbar province .",
+        "entities": [
+            {
+                "text": "Sunday",
+                "label": "DATE"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "Baghdad",
+                "label": "GPE"
+            },
+            {
+                "text": "Anbar",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Separately , a U.S. soldier wounded by a roadside bomb Saturday in Baghdad has died .",
+        "entities": [
+            {
+                "text": "Saturday",
+                "label": "DATE"
+            },
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "Baghdad",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Military officials also say U.S. forces and Iraqi police detained more than 50 people during weekend raids targeting insurgents around Baquba , north of Baghdad .",
+        "entities": [
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "Iraqi",
+                "label": "GPE"
+            },
+            {
+                "text": "Baquba",
+                "label": "GPE"
+            },
+            {
+                "text": "Baghdad",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Scientists at the U.S. space agency , NASA , have unveiled dramatic photographs of a huge crater on Mars taken by the roving surface probe Opportunity .",
+        "entities": [
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "NASA",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "On Friday , Opportunity sent back its first color panorama of Victoria , the 800-meter-wide Martian crater the rover reached last week after a 21-month trek .",
+        "entities": [
+            {
+                "text": "Friday",
+                "label": "DATE"
+            },
+            {
+                "text": "21-month",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "NASA scientists told reporters Friday the sharp images of rock formations and soil layers open a window on the past of the planet .",
+        "entities": [
+            {
+                "text": "Friday",
+                "label": "DATE"
+            },
+            {
+                "text": "NASA",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "They say Victoria 's exposed rock layers could help reveal the mystery of whether life existed on Mars .",
+        "entities": []
+    },
+    {
+        "sentence": "NASA also displayed new photos taken by the Mars Reconnaissance satellite orbiting overhead , that included pictures of Victoria Crater and the Opportunity rover .",
+        "entities": [
+            {
+                "text": "NASA",
+                "label": "ORG"
+            },
+            {
+                "text": "Mars Reconnaissance",
+                "label": "ORG"
+            }
+            
+        ]
+    },
+    {
+        "sentence": "NASA researchers say they will use the photographs to plot the best route for the six-wheeled rover to descend into the crater .",
+        "entities": [
+            {
+                "text": "NASA",
+                "label": "ORG"
+            }
+        ]
+    },
+    {
+        "sentence": "The U.S. media seized on recent reports that high school girls in a Massachusetts town had made a pact to get pregnant and raise babies together .",
+        "entities": [
+            {
+                "text": "U.S",
+                "label": "GPE"
+            },
+            {
+                "text": "Massachusetts",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Officials have rejected reports of a pregnancy pact , but the incident highlights concern among some adolescent health experts that the U.S. teen birth rate is starting to rise again .",
+        "entities": [
+            {
+                "text": "U.S",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Leta Hong Fincher has more on teen mothers and efforts to reduce teen pregnancy .",
+        "entities": [
+            {
+                "text": "Leta Hong Fincher",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "A Nigerian military aircraft carrying at least 12 people has crashed in the southeast part of the country .",
+        "entities": [
+            {
+                "text": "Nigerian",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Military officers are among those who were on board .",
+        "entities": []
+    },
+    {
+        "sentence": "Some on the plane are believed to have survived the crash .",
+        "entities": []
+    },
+    {
+        "sentence": "The air force plane was flying from Nigeria 's capital , Abuja , to Obudu near Nigeria 's southeast border with Cameroon .",
+        "entities": [
+            {
+                "text": "Nigeria",
+                "label": "GPE"
+            },
+            {
+                "text": "Abuja",
+                "label": "GPE"
+            },
+            {
+                "text": "Obudu",
+                "label": "GPE"
+            },
+            {
+                "text": "Cameroon",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Former Chilean dictator Augusto Pinochet is spending his 90th birthday Friday under house arrest after a judge charged him with human rights violations .",
+        "entities": [
+            {
+                "text": "Friday",
+                "label": "DATE"
+            },
+            {
+                "text": "Chilean",
+                "label": "NORP"
+            },
+            {
+                "text": "Augusto Pinochet",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The charges , which were leveled against the former dictator Thursday , stem from the disappearance of seven people arrested by General Pinochet 's security services in the early years of his 1973 to 1990 rule .",
+        "entities": [
+            {
+                "text": "Thursday",
+                "label": "DATE"
+            },
+            {
+                "text": "1973",
+                "label": "DATE"
+            },
+            {
+                "text": "1990",
+                "label": "DATE"
+            },
+            {
+                "text": "General Pinochet",
+                "label": "PERSON"
+            }
+        ]
+    },
+    {
+        "sentence": "They were among 119 people who disappeared while in custody in a case known as \" Operation Colombo . \"",
+        "entities": []
+    },
+    {
+        "sentence": "This is the second indictment in two days against the former dictator .",
+        "entities": []
+    },
+    {
+        "sentence": "General Pinochet had just made bail following his indictment Wednesday on charges of tax evasion , corruption and using FALSE passports in a case involving an estimated $ 27 million hidden in foreign bank accounts .",
+        "entities": [
+            {
+                "text": "Wednesday",
+                "label": "DATE"
+            },
+            {
+                "text": "General Pinochet",
+                "label": "PERSON"
+            },
+            {
+                "text": "$ 27 million",
+                "label": "MONEY"
+            }
+        ]
+    },
+    {
+        "sentence": "Dutch oil giant Shell has asked a Nigerian court to block oil workers from joining a nationwide labor strike set to begin November 16 .",
+        "entities": [
+            {
+                "text": "Dutch",
+                "label": "NORP"
+            },
+            {
+                "text": "Shell",
+                "label": "ORG"
+            },
+            {
+                "text": "Nigerian",
+                "label": "NORP"
+            },
+            {
+                "text": "November 16",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "A judge in Lagos Monday declined to rule on the case immediately and scheduled a second hearing two days after the launch of the strike .",
+        "entities": [
+            {
+                "text": "Monday",
+                "label": "DATE"
+            },
+            {
+                "text": "Lagos",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Sunday , the country 's main labor union , the Nigeria Labor Congress , said the next work stoppage will be \" indefinite \" and will aim to disrupt the country 's oil exports .",
+        "entities": [
+            {
+                "text": "Sunday",
+                "label": "DATE"
+            },
+            {
+                "text": "Nigeria Labor Congress",
+                "label": "ORG"
+            },
+            {
+                "text": "Nigeria",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The union 's president , Adams Oshiomole , also called Shell an \" enemy \" of the Nigerian people .",
+        "entities": [
+            {
+                "text": "Adams Oshiomole",
+                "label": "PERSON"
+            },
+            {
+                "text": "Shell",
+                "label": "ORG"
+            },
+            {
+                "text": "Nigerian",
+                "label": "NORP"
+            }
+        ]
+    },
+    {
+        "sentence": "Last month , the union held a four-day strike , which did not include oil workers .",
+        "entities": [
+            {
+                "text": "Last month",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Nigerian unions have criticized rising fuel prices in the country , Africa 's leading oil producer .",
+        "entities": [
+            {
+                "text": "Nigerian",
+                "label": "NORP"
+            },
+            {
+                "text": "Africa",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "The government says price hikes are needed to end costly subsidies .",
+        "entities": []
+    },
+    {
+        "sentence": "The leader of a Saudi Arabian opposition group is calling on protesters to take to the streets of Riyadh and Jeddah Thursday in a peaceful call for the monarchy 's removal .",
+        "entities": [
+            {
+                "text": "Thursday",
+                "label": "DATE"
+            },
+            {
+                "text": "Saudi Arabian",
+                "label": "GPE"
+            },
+            {
+                "text": "Riyadh",
+                "label": "GPE"
+            },
+            {
+                "text": "Jeddah",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Saad al-Fagih , the London-based head of the Movement of Islamic Reform in Arabia and protest organizer , says his group wants total change , not minor economic , political or social reform .",
+        "entities": [
+            {
+                "text": "Saad al-Fagih",
+                "label": "PERSON"
+            },
+            {
+                "text": "London",
+                "label": "GPE"
+            },
+            {
+                "text": "Movement of Islamic Reform",
+                "label": "ORG"
+            },
+            {
+                "text": "Arabia",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "He said he expects \" tens of thousands \" of people to take part in the protest , which will begin after noon prayers Thursday .",
+        "entities": [
+            {
+                "text": "Thursday",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Such demonstrations are illegal in Saudi Arabia , and those participating would risk arrest .",
+        "entities": [
+            {
+                "text": "Saudi Arabia",
+                "label": "GPE"
+            }
+        ]
+    },
+    {
+        "sentence": "Mr. Fagih , has lived in London for eight years .",
+        "entities": [
+            {
+                "text": "Mr. Fagih",
+                "label": "PERSON"
+            },
+            {
+                "text": "London",
+                "label": "GPE"
+            },
+            {
+                "text": "eight years",
+                "label": "DATE"
+            }
+        ]
+    },
+    {
+        "sentence": "Last year , he accused Saudi agents of attempting to kill him in a stabbing incident at his London home .",
+        "entities": [
+            {
+                "text": "Last year",
+                "label": "DATE"
+            },
+            {
+                "text": "Saudi",
+                "label": "NORP"
+            },
+            {
+                "text": "London",
+                "label": "GPE"
+            }
+        ]
+    }
+]
