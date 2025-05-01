@@ -11,6 +11,7 @@ A voice-controlled assistant that performs actions based on spoken commands. Thi
 - **Report Generation**: Can generate reports on specified topics using OpenAI's API
 
 ## Project Structure
+```bash
 Speech-To-Action-Bot/
 ├── app.py              # Main application file
 ├── run.py              # Flask application runner
@@ -28,7 +29,8 @@ Speech-To-Action-Bot/
 │   ├── hmm.mp3         # Acknowledgment sound
 │   └── hmm.wav         # Acknowledgment sound (WAV format)
 └── data/               # Training data
-└── training_data.csv    # Sample training data for the model
+    └── training_data.csv    # Sample training data for the model
+```
 
 ## Installation
 
