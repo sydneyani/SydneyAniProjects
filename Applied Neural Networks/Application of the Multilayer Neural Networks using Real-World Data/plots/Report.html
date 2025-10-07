@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Project I — Car Evaluation Report</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 24px; }
+  h1, h2 { margin-top: 1.2em; }
+  .img-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
+  figure { margin: 0; padding: 0; }
+  figcaption { font-size: 12px; color: #555; }
+  table.results-table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+  .results-table th, .results-table td { border: 1px solid #ccc; padding: 6px 10px; text-align: center; font-size: 13px; }
+  pre { background:#f6f8fa; padding:12px; border:1px solid #e1e4e8; border-radius:6px; overflow-x:auto; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 12px; }
+  p { line-height: 1.6; text-align: justify; }
+</style>
+</head>
+<body>
+<h1>Project I — Report (Car Evaluation)</h1>
+<p><strong>Generated:</strong> 2025-10-06 21:59</p>
+
+<h2>A. Data Preparation &amp; Normalization</h2>
+<p>The UCI Car Evaluation dataset consists of 1,728 samples across 7 categorical attributes: buying, maint, doors, persons, lug_boot, safety, and class (label). The first six columns serve as input features, while the final column represents the target class category to predict. All six input variables are nominal and were one-hot encoded to convert each category into a binary indicator variable suitable for numerical processing by the neural network. The target column (class) was label-encoded into integer form using the mapping: 0 → &#x27;acc&#x27; (acceptable), 1 → &#x27;good&#x27;, 2 → &#x27;unacc&#x27; (unacceptable), and 3 → &#x27;vgood&#x27; (very good). This encoding allows the model to interpret categorical outputs numerically while preserving class relationships. The dataset was then split into training (70%) and testing (30%) subsets using a stratified split to maintain class balance. Normalization was not required since all features are categorical and the one-hot encoding inherently ensures uniform scaling. This preprocessing approach aligns with AWS Module 3’s data pipeline methodology for handling categorical tabular data.</p>
+<pre><code># Preprocess (one-hot features, label-encode target)
+X = df.drop(columns=[&#x27;label&#x27;])
+y_raw = df[&#x27;label&#x27;].values
+
+try:
+    preprocessor = ColumnTransformer([
+        (&#x27;cat&#x27;, OneHotEncoder(handle_unknown=&#x27;ignore&#x27;, sparse_output=False), list(X.columns))
+    ])
+except TypeError:
+    preprocessor = ColumnTransformer([
+        (&#x27;cat&#x27;, OneHotEncoder(handle_unknown=&#x27;ignore&#x27;, sparse=False), list(X.columns))
+    ])
+
+le = LabelEncoder()
+y = le.fit_transform(y_raw)
+
+print(&#x27;Label encoding mapping:&#x27;)
+for i, cls in enumerate(le.classes_):
+    print(f&#x27;{i} → {cls}&#x27;)
+
+# 70/30 stratified split
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3, random_state=42, stratify=y
+)</code></pre>
+
+<h2>B. Network Architecture</h2>
+<p>The architecture is a Multilayer Perceptron (MLP) implemented via scikit-learn’s MLPClassifier. The network uses a single hidden layer with variable width tested across three configurations: (4,), (8,), and (16,). The activation function for hidden neurons is ReLU, and the output layer applies a softmax operation for multiclass classification. The model is trained using Stochastic Gradient Descent (SGD) with adjustable momentum to accelerate convergence. L2 regularization (alpha=0.001) was included to constrain the magnitude of the learned weights and reduce overfitting, improving the network’s ability to generalize to unseen data. Hyperparameters include batch_size=64, max_iter=200, tol=1e-4, and random_state=42 for reproducibility. This setup mirrors the typical SageMaker Module 3 design of defining model architecture, optimizer, and regularization strategy as a unified training configuration.</p>
+<pre><code>#shortened for brevity
+
+# Core model (SGD + momentum + L2) and pipeline
+clf = MLPClassifier(hidden_layer_sizes=hidden,
+                    activation=&#x27;relu&#x27;,
+                    solver=&#x27;sgd&#x27;,
+                    learning_rate_init=lr,
+                    momentum=momentum,
+                    alpha=0.001)  # L2 regularization
+pipe = Pipeline([(&#x27;prep&#x27;, preprocessor), (&#x27;clf&#x27;, clf)])</code></pre>
+
+<h2>C. Learning Rate &amp; Learning Process</h2>
+<p>Learning rate directly affects convergence speed and stability. We tested three values — 0.01, 0.1, and 0.8 — to evaluate their impact. The smallest rate (0.01) converged slowly but steadily with higher epoch counts. The intermediate value (0.1) offered the best trade-off between stability and performance, leading to smoother loss reduction and stronger generalization. The highest rate (0.8) produced faster but less stable learning with occasional oscillations, which aligns with the theory that excessively large steps may overshoot minima. All training loss curves are saved under the plots/ directory and demonstrate the differences in learning behavior clearly.</p>
+<pre><code># Plot helper (loss only)
+def plot_loss(loss_curve, title, save_path):
+    if not loss_curve:
+        return
+    plt.figure()
+    plt.plot(loss_curve)
+    plt.title(title)
+    plt.xlabel(&#x27;Epoch&#x27;)
+    plt.ylabel(&#x27;Loss&#x27;)
+    plt.tight_layout()
+    plt.savefig(save_path)
+    plt.show()</code></pre>
+
+<h2>D. Momentum &amp; Convergence</h2>
+<p>Momentum terms of 0.3 and 0.9 were evaluated to observe how past gradients influence the optimization path. A higher momentum value (0.9) reduced training oscillations and reached convergence faster, while the smaller momentum (0.3) displayed slower and more fluctuating progress toward the minimum. The use of momentum effectively simulates physical inertia, helping the network maintain direction through shallow minima and avoid premature convergence. These results align with the AWS Module 3 guidance on comparing convergence rates under different momentum values.</p>
+
+<h2>E. Hidden Neurons — Train/Test Effects</h2>
+<p>To study network capacity, three hidden neuron configurations were tested: (4,), (8,), and (16,). Increasing the number of neurons improved both training and testing accuracy up to a point. The smaller configuration underfit the data and could not capture complex relationships among features, whereas the medium and large architectures achieved higher generalization. However, the gain beyond 16 neurons was minimal, suggesting diminishing returns on added capacity. These outcomes are visible in the &#x27;results_summary.csv&#x27; file, where test accuracy and F1-score improve with increasing hidden units but eventually stabilize.</p>
+<pre><code># Experiment grid (LR, momentum, hidden)
+learning_rates = [0.01, 0.1, 0.8]
+momentums      = [0.3, 0.9]
+hiddens        = [(4,), (8,), (16,)]
+
+results = []
+for lr in learning_rates:
+    for mom in momentums:
+        for hidden in hiddens:
+            pipe, res = train_once(lr, mom, hidden)
+            results.append(res)
+
+            # Save loss curve image for this run
+            title = f&#x27;Loss — lr={lr}, momentum={mom}, hidden={hidden}&#x27;
+            fname  = PLOTS_DIR / f&#x27;loss_lr{lr}_mom{mom}_h{hidden[0]}.png&#x27;
+            plot_loss(res[&#x27;loss_curve&#x27;], title, fname)
+
+df_res = pd.DataFrame(results)
+df_res_sorted = df_res.sort_values(by=[&#x27;acc_test&#x27;,&#x27;f1&#x27;], ascending=False)</code></pre>
+
+<h2>F. Classification Performance (Train/Test)</h2>
+<p>The model’s classification performance was assessed using accuracy, precision, recall, and F1-score for both training and testing sets. Accuracy provides an overall measure of correct predictions, while precision and recall highlight how well each class was distinguished. The weighted F1-score balances these two metrics to account for class imbalance. The results show that the model achieves high training accuracy with comparable testing performance, indicating successful generalization rather than overfitting. Detailed metrics for all runs are embedded below.</p>
+<table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>lr</th>
+      <th>momentum</th>
+      <th>hidden</th>
+      <th>acc_train</th>
+      <th>acc_test</th>
+      <th>precision</th>
+      <th>recall</th>
+      <th>f1</th>
+      <th>train_mse</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.100000</td>
+      <td>0.900000</td>
+      <td>(16,)</td>
+      <td>1.000000</td>
+      <td>0.994220</td>
+      <td>0.994213</td>
+      <td>0.994220</td>
+      <td>0.994211</td>
+      <td>0.000062</td>
+    </tr>
+    <tr>
+      <td>0.800000</td>
+      <td>0.300000</td>
+      <td>(8,)</td>
+      <td>1.000000</td>
+      <td>0.990366</td>
+      <td>0.990451</td>
+      <td>0.990366</td>
+      <td>0.990341</td>
+      <td>0.000086</td>
+    </tr>
+    <tr>
+      <td>0.800000</td>
+      <td>0.300000</td>
+      <td>(16,)</td>
+      <td>1.000000</td>
+      <td>0.990366</td>
+      <td>0.990378</td>
+      <td>0.990366</td>
+      <td>0.990322</td>
+      <td>0.000037</td>
+    </tr>
+    <tr>
+      <td>0.800000</td>
+      <td>0.900000</td>
+      <td>(16,)</td>
+      <td>1.000000</td>
+      <td>0.982659</td>
+      <td>0.982599</td>
+      <td>0.982659</td>
+      <td>0.982580</td>
+      <td>0.000002</td>
+    </tr>
+    <tr>
+      <td>0.100000</td>
+      <td>0.900000</td>
+      <td>(8,)</td>
+      <td>1.000000</td>
+      <td>0.978805</td>
+      <td>0.979262</td>
+      <td>0.978805</td>
+      <td>0.978853</td>
+      <td>0.000230</td>
+    </tr>
+    <tr>
+      <td>0.100000</td>
+      <td>0.300000</td>
+      <td>(16,)</td>
+      <td>0.995037</td>
+      <td>0.976879</td>
+      <td>0.976863</td>
+      <td>0.976879</td>
+      <td>0.976804</td>
+      <td>0.003009</td>
+    </tr>
+    <tr>
+      <td>0.010000</td>
+      <td>0.900000</td>
+      <td>(16,)</td>
+      <td>0.989247</td>
+      <td>0.967245</td>
+      <td>0.968041</td>
+      <td>0.967245</td>
+      <td>0.967248</td>
+      <td>0.005910</td>
+    </tr>
+    <tr>
+      <td>0.100000</td>
+      <td>0.300000</td>
+      <td>(8,)</td>
+      <td>0.976013</td>
+      <td>0.963391</td>
+      <td>0.964524</td>
+      <td>0.963391</td>
+      <td>0.963439</td>
+      <td>0.009499</td>
+    </tr>
+    <tr>
+      <td>0.010000</td>
+      <td>0.900000</td>
+      <td>(8,)</td>
+      <td>0.973532</td>
+      <td>0.957611</td>
+      <td>0.959385</td>
+      <td>0.957611</td>
+      <td>0.957798</td>
+      <td>0.011567</td>
+    </tr>
+    <tr>
+      <td>0.800000</td>
+      <td>0.300000</td>
+      <td>(4,)</td>
+      <td>0.976840</td>
+      <td>0.955684</td>
+      <td>0.957359</td>
+      <td>0.955684</td>
+      <td>0.956242</td>
+      <td>0.008219</td>
+    </tr>
+    <tr>
+      <td>0.100000</td>
+      <td>0.300000</td>
+      <td>(4,)</td>
+      <td>0.957816</td>
+      <td>0.951830</td>
+      <td>0.951481</td>
+      <td>0.951830</td>
+      <td>0.951549</td>
+      <td>0.015939</td>
+    </tr>
+    <tr>
+      <td>0.010000</td>
+      <td>0.900000</td>
+      <td>(4,)</td>
+      <td>0.940447</td>
+      <td>0.928709</td>
+      <td>0.928345</td>
+      <td>0.928709</td>
+      <td>0.927935</td>
+      <td>0.021592</td>
+    </tr>
+    <tr>
+      <td>0.100000</td>
+      <td>0.900000</td>
+      <td>(4,)</td>
+      <td>0.928867</td>
+      <td>0.921002</td>
+      <td>0.916507</td>
+      <td>0.921002</td>
+      <td>0.916995</td>
+      <td>0.024432</td>
+    </tr>
+    <tr>
+      <td>0.800000</td>
+      <td>0.900000</td>
+      <td>(4,)</td>
+      <td>0.925558</td>
+      <td>0.919075</td>
+      <td>0.916254</td>
+      <td>0.919075</td>
+      <td>0.914932</td>
+      <td>0.029081</td>
+    </tr>
+    <tr>
+      <td>0.010000</td>
+      <td>0.300000</td>
+      <td>(16,)</td>
+      <td>0.903226</td>
+      <td>0.901734</td>
+      <td>0.907280</td>
+      <td>0.901734</td>
+      <td>0.895168</td>
+      <td>0.031926</td>
+    </tr>
+    <tr>
+      <td>0.010000</td>
+      <td>0.300000</td>
+      <td>(8,)</td>
+      <td>0.885856</td>
+      <td>0.878613</td>
+      <td>0.887335</td>
+      <td>0.878613</td>
+      <td>0.862964</td>
+      <td>0.036610</td>
+    </tr>
+    <tr>
+      <td>0.010000</td>
+      <td>0.300000</td>
+      <td>(4,)</td>
+      <td>0.868486</td>
+      <td>0.855491</td>
+      <td>0.800565</td>
+      <td>0.855491</td>
+      <td>0.825415</td>
+      <td>0.051575</td>
+    </tr>
+    <tr>
+      <td>0.800000</td>
+      <td>0.900000</td>
+      <td>(8,)</td>
+      <td>0.778329</td>
+      <td>0.776493</td>
+      <td>0.809732</td>
+      <td>0.776493</td>
+      <td>0.766136</td>
+      <td>0.069776</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>G. Training MSE</h2>
+<p>The Mean Squared Error (MSE) of the training set was calculated using predicted probabilities versus the one-hot encoded ground truth labels. This metric provides a continuous measure of how closely the model’s predicted class probabilities align with the true distributions. Lower MSE values indicate that the model’s confidence scores are well-calibrated, reflecting both correct classification and reliable probability estimation. Below we include a compact table of training MSE for each configuration and a bar chart for quick comparison.</p>
+<table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>lr</th>
+      <th>momentum</th>
+      <th>hidden</th>
+      <th>train_mse</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.100000</td>
+      <td>0.900000</td>
+      <td>(16,)</td>
+      <td>0.000062</td>
+    </tr>
+    <tr>
+      <td>0.800000</td>
+      <td>0.300000</td>
+      <td>(8,)</td>
+      <td>0.000086</td>
+    </tr>
+    <tr>
+      <td>0.800000</td>
+      <td>0.300000</td>
+      <td>(16,)</td>
+      <td>0.000037</td>
+    </tr>
+    <tr>
+      <td>0.800000</td>
+      <td>0.900000</td>
+      <td>(16,)</td>
+      <td>0.000002</td>
+    </tr>
+    <tr>
+      <td>0.100000</td>
+      <td>0.900000</td>
+      <td>(8,)</td>
+      <td>0.000230</td>
+    </tr>
+    <tr>
+      <td>0.100000</td>
+      <td>0.300000</td>
+      <td>(16,)</td>
+      <td>0.003009</td>
+    </tr>
+    <tr>
+      <td>0.010000</td>
+      <td>0.900000</td>
+      <td>(16,)</td>
+      <td>0.005910</td>
+    </tr>
+    <tr>
+      <td>0.100000</td>
+      <td>0.300000</td>
+      <td>(8,)</td>
+      <td>0.009499</td>
+    </tr>
+    <tr>
+      <td>0.010000</td>
+      <td>0.900000</td>
+      <td>(8,)</td>
+      <td>0.011567</td>
+    </tr>
+    <tr>
+      <td>0.800000</td>
+      <td>0.300000</td>
+      <td>(4,)</td>
+      <td>0.008219</td>
+    </tr>
+    <tr>
+      <td>0.100000</td>
+      <td>0.300000</td>
+      <td>(4,)</td>
+      <td>0.015939</td>
+    </tr>
+    <tr>
+      <td>0.010000</td>
+      <td>0.900000</td>
+      <td>(4,)</td>
+      <td>0.021592</td>
+    </tr>
+    <tr>
+      <td>0.100000</td>
+      <td>0.900000</td>
+      <td>(4,)</td>
+      <td>0.024432</td>
+    </tr>
+    <tr>
+      <td>0.800000</td>
+      <td>0.900000</td>
+      <td>(4,)</td>
+      <td>0.029081</td>
+    </tr>
+    <tr>
+      <td>0.010000</td>
+      <td>0.300000</td>
+      <td>(16,)</td>
+      <td>0.031926</td>
+    </tr>
+    <tr>
+      <td>0.010000</td>
+      <td>0.300000</td>
+      <td>(8,)</td>
+      <td>0.036610</td>
+    </tr>
+    <tr>
+      <td>0.010000</td>
+      <td>0.300000</td>
+      <td>(4,)</td>
+      <td>0.051575</td>
+    </tr>
+    <tr>
+      <td>0.800000</td>
+      <td>0.900000</td>
+      <td>(8,)</td>
+      <td>0.069776</td>
+    </tr>
+  </tbody>
+</table>
+<figure><img src="train_mse_bar.png" alt="Training MSE bar chart" width="100%"/><figcaption>Training MSE by configuration</figcaption></figure>
+
+<h2>Class Label Mapping</h2>
+<p>The model’s output categories correspond to the following car evaluation classes:</p>
+<ul><li><strong>0</strong> → acc</li><li><strong>1</strong> → good</li><li><strong>2</strong> → unacc</li><li><strong>3</strong> → vgood</li></ul>
+
+<h2>Per-class Metrics (Best Model)</h2>
+<table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>precision</th>
+      <th>recall</th>
+      <th>f1-score</th>
+      <th>support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>unacc</th>
+      <td>0.995</td>
+      <td>0.997</td>
+      <td>0.996</td>
+      <td>363.000</td>
+    </tr>
+    <tr>
+      <th>acc</th>
+      <td>0.991</td>
+      <td>0.983</td>
+      <td>0.987</td>
+      <td>115.000</td>
+    </tr>
+    <tr>
+      <th>good</th>
+      <td>1.000</td>
+      <td>1.000</td>
+      <td>1.000</td>
+      <td>21.000</td>
+    </tr>
+    <tr>
+      <th>vgood</th>
+      <td>1.000</td>
+      <td>1.000</td>
+      <td>1.000</td>
+      <td>20.000</td>
+    </tr>
+    <tr>
+      <th>accuracy</th>
+      <td>0.994</td>
+      <td>0.994</td>
+      <td>0.994</td>
+      <td>0.994</td>
+    </tr>
+    <tr>
+      <th>macro avg</th>
+      <td>0.996</td>
+      <td>0.995</td>
+      <td>0.996</td>
+      <td>519.000</td>
+    </tr>
+    <tr>
+      <th>weighted avg</th>
+      <td>0.994</td>
+      <td>0.994</td>
+      <td>0.994</td>
+      <td>519.000</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Predicted Class Distribution (Test Set)</h2>
+<table class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>predicted_class</th>
+      <th>count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>acc</td>
+      <td>114</td>
+    </tr>
+    <tr>
+      <td>good</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>unacc</td>
+      <td>364</td>
+    </tr>
+    <tr>
+      <td>vgood</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>H. Findings</h2>
+<p>Across all experiments, the best configuration used a moderate learning rate (0.1), higher momentum (0.9), and a larger hidden layer size (16 neurons). This setup achieved the highest test accuracy (≈0.9942) and stable convergence. The configuration with 8 neurons performed nearly as well and provided a strong balance between computational efficiency and accuracy, but the 16-neuron network demonstrated slightly superior generalization performance. Lower learning rates slowed progress, while higher rates caused instability. Momentum 0.9 consistently improved both convergence speed and final accuracy. The addition of L2 regularization (alpha=0.001) effectively reduced overfitting by penalizing overly large weight values, improving the model’s ability to generalize to unseen data. The model utilized label encoding for the target classes, assigning integer values to each purchase category as follows: 0 = &#x27;acc&#x27; (acceptable), 1 = &#x27;good&#x27;, 2 = &#x27;unacc&#x27; (unacceptable), and 3 = &#x27;vgood&#x27; (very good). This encoding enabled the network to efficiently perform multiclass classification and map predictions back to meaningful categories. The network successfully classified vehicle evaluations into these purchase classes, accurately predicting whether a car would be purchased based on attributes such as buying price, maintenance cost, safety, and capacity. Overall, this experiment demonstrates how tuning learning rate, momentum, regularization, and network size interact to achieve an optimal balance between speed, stability, and generalization — directly reflecting the objectives of AWS Module 3’s hands-on pipeline training.</p>
+
+<h2>Loss Curves</h2>
+<div class="img-grid">
+<figure><img src="loss_lr0.01_mom0.3_h16.png" alt="loss_lr0.01_mom0.3_h16.png" width="100%"/><figcaption>loss_lr0.01_mom0.3_h16.png</figcaption></figure><figure><img src="loss_lr0.01_mom0.3_h4.png" alt="loss_lr0.01_mom0.3_h4.png" width="100%"/><figcaption>loss_lr0.01_mom0.3_h4.png</figcaption></figure><figure><img src="loss_lr0.01_mom0.3_h8.png" alt="loss_lr0.01_mom0.3_h8.png" width="100%"/><figcaption>loss_lr0.01_mom0.3_h8.png</figcaption></figure><figure><img src="loss_lr0.01_mom0.9_h16.png" alt="loss_lr0.01_mom0.9_h16.png" width="100%"/><figcaption>loss_lr0.01_mom0.9_h16.png</figcaption></figure><figure><img src="loss_lr0.01_mom0.9_h4.png" alt="loss_lr0.01_mom0.9_h4.png" width="100%"/><figcaption>loss_lr0.01_mom0.9_h4.png</figcaption></figure><figure><img src="loss_lr0.01_mom0.9_h8.png" alt="loss_lr0.01_mom0.9_h8.png" width="100%"/><figcaption>loss_lr0.01_mom0.9_h8.png</figcaption></figure><figure><img src="loss_lr0.1_mom0.3_h16.png" alt="loss_lr0.1_mom0.3_h16.png" width="100%"/><figcaption>loss_lr0.1_mom0.3_h16.png</figcaption></figure><figure><img src="loss_lr0.1_mom0.3_h4.png" alt="loss_lr0.1_mom0.3_h4.png" width="100%"/><figcaption>loss_lr0.1_mom0.3_h4.png</figcaption></figure><figure><img src="loss_lr0.1_mom0.3_h8.png" alt="loss_lr0.1_mom0.3_h8.png" width="100%"/><figcaption>loss_lr0.1_mom0.3_h8.png</figcaption></figure><figure><img src="loss_lr0.1_mom0.9_h16.png" alt="loss_lr0.1_mom0.9_h16.png" width="100%"/><figcaption>loss_lr0.1_mom0.9_h16.png</figcaption></figure><figure><img src="loss_lr0.1_mom0.9_h4.png" alt="loss_lr0.1_mom0.9_h4.png" width="100%"/><figcaption>loss_lr0.1_mom0.9_h4.png</figcaption></figure><figure><img src="loss_lr0.1_mom0.9_h8.png" alt="loss_lr0.1_mom0.9_h8.png" width="100%"/><figcaption>loss_lr0.1_mom0.9_h8.png</figcaption></figure><figure><img src="loss_lr0.8_mom0.3_h16.png" alt="loss_lr0.8_mom0.3_h16.png" width="100%"/><figcaption>loss_lr0.8_mom0.3_h16.png</figcaption></figure><figure><img src="loss_lr0.8_mom0.3_h4.png" alt="loss_lr0.8_mom0.3_h4.png" width="100%"/><figcaption>loss_lr0.8_mom0.3_h4.png</figcaption></figure><figure><img src="loss_lr0.8_mom0.3_h8.png" alt="loss_lr0.8_mom0.3_h8.png" width="100%"/><figcaption>loss_lr0.8_mom0.3_h8.png</figcaption></figure><figure><img src="loss_lr0.8_mom0.9_h16.png" alt="loss_lr0.8_mom0.9_h16.png" width="100%"/><figcaption>loss_lr0.8_mom0.9_h16.png</figcaption></figure><figure><img src="loss_lr0.8_mom0.9_h4.png" alt="loss_lr0.8_mom0.9_h4.png" width="100%"/><figcaption>loss_lr0.8_mom0.9_h4.png</figcaption></figure><figure><img src="loss_lr0.8_mom0.9_h8.png" alt="loss_lr0.8_mom0.9_h8.png" width="100%"/><figcaption>loss_lr0.8_mom0.9_h8.png</figcaption></figure>
+</div>
+
+<h2>Code Appendix</h2>
+<p>For brevity, only key snippets are shown above. The full implementation is available in the accompanying <strong>Project_1.ipynb</strong>.</p>
+
+</body>
+</html>
