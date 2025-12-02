@@ -442,27 +442,57 @@ Typical figures :
 
 GAN Sample Grids:
 
-epoch40, epoch50, epoch75, epoch85
+epoch40 :
+
+<img width="589" height="593" alt="image" src="https://github.com/user-attachments/assets/27825549-aa19-4af7-9e63-61db9093f972" />
+
+epoch50 :
+
+<img width="589" height="593" alt="image" src="https://github.com/user-attachments/assets/4f082968-24ba-4640-9242-6859fd46d306" />
+
+epoch75 :
+
+<img width="589" height="593" alt="image" src="https://github.com/user-attachments/assets/4d405f46-37d1-4875-ac26-6ba7bcb99a6a" />
+
+epoch85 :
+
+<img width="589" height="593" alt="image" src="https://github.com/user-attachments/assets/1e72e648-e4e5-4c17-812b-d539e4586f53" />
+
 
 Synthetic Samples:
 
 Class-conditional grid (fake lesions conditioned on each dx class)
 
+<img width="581" height="592" alt="image" src="https://github.com/user-attachments/assets/8a930722-759d-49a7-937c-42fa145989f0" />
+
+
 Validation Accuracy Curves:
 
 Baseline vs GAN-augmented
 
+<img width="576" height="455" alt="image" src="https://github.com/user-attachments/assets/0f681b25-5bb8-41ae-9aef-e8fcede28dcc" />
+
 Confusion Matrices:
 
-Raw counts
+Raw counts :
 
-Normalized recall
+<img width="882" height="790" alt="image" src="https://github.com/user-attachments/assets/7c0febe4-231b-46d8-b461-fa7f169a61ff" />
+
+
+Normalized recall :
+
+<img width="878" height="790" alt="image" src="https://github.com/user-attachments/assets/89413baf-aa23-41f7-8a00-926696bc755f" />
+
 
 Metrics Summary:
 
-Final test accuracy (baseline vs GAN)
+<img width="404" height="150" alt="evalmetrics" src="https://github.com/user-attachments/assets/812e8e3c-17d2-4c3d-a0aa-f2b597acbc93" />
 
-Macro AUC
+
+Macro AUC :
+
+<img width="244" height="26" alt="macroauc" src="https://github.com/user-attachments/assets/f3441293-403a-450e-bbe9-9b77bc317784" />
+
 
 ## 8. Interpretation 
 The conditional GAN learns to generate skin-like textures and lesion-like blobs at 64×64.
