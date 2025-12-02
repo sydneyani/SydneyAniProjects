@@ -1,4 +1,4 @@
-# Most Recent Project :
+# Most Recent Project 12/2/2025 :
 
 # Generative Adversarial Networks for Medical Image Augmentation  
 **Synthetic Skin Lesion Image Generation using HAM10000**
