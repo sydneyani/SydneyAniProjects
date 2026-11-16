@@ -1,6 +1,8 @@
-# You need to give your credentials here
+import os
+
+
 class Creds:
-    host="cis3368fall2023.c1eeeidrpfau.us-east-1.rds.amazonaws.com",
-    user="admin",
-    password="580091Sydney",
-    database="cis3368falldb"
+    host = os.environ.get("DB_HOST", "")
+    user = os.environ.get("DB_USER", "")
+    password = os.environ.get("DB_PASSWORD", "")
+    database = os.environ.get("DB_NAME", "")

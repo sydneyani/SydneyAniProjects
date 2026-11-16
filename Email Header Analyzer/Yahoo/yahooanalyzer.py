@@ -34,7 +34,7 @@ Authentication-Results: atlas-production.v2-mail-prod1-bf1.omega.yahoo.com;
  dkim=unknown;
  spf=none smtp.mailfrom=edm.cayennetech.com.tw;
  dmarc=unknown header.from=edm.cayennetech.com.tw;
-X-Apparently-To: sydneyani@yahoo.com; Thu, 25 Jan 2024 12:14:02 +0000
+X-Apparently-To: recipient@example.com; Thu, 25 Jan 2024 12:14:02 +0000
 X-YMailISG: _J9cirwWLDtUbYq_2AbHy2FP.os.UhkKJReq91qGuTBKtyVu
  7tmuHQ_kBxExl8CPpaQtUf3PJWngG7JEIvNew5GtXsbBfc3cDSPH1lcYOzyK
  G6ObeSzYp5pfw5XSZ0xOoJSlD8ChfR0z2RyqkiKOUYqCSI2f1y6SUYAnEQlA

@@ -2,11 +2,13 @@ const express = require('express');
 const mysql = require('mysql');
 const bcrypt = require('bcryptjs');
 const axios = require('axios');
-const password= 'password123';
+const password = process.env.DEMO_PASSWORD;
 const saltRounds = 10;
 
-const hash = bcrypt.hashSync(password, saltRounds);
-console.log(hash);
+if (password) {
+  const hash = bcrypt.hashSync(password, saltRounds);
+  console.log(hash);
+}
 
 const app = express();
 const port = 3000; // Node.js default
@@ -20,10 +22,10 @@ app.use(express.urlencoded({ extended: true }));
 
 // MySQL Configuration
 const connection = mysql.createConnection({
-  host: "cis3368fall2023.c1eeeidrpfau.us-east-1.rds.amazonaws.com",
-  user: "admin",
-  password: "580091Sydney", // Use environment variables in production
-  database: "cis3368falldb"
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
 });
 
 connection.connect(error => {
@@ -36,7 +38,7 @@ connection.connect(error => {
 
 // Hardcoded username and hashed password (for demonstration purposes)
 const users = {
-  "admin": "$2y$10$o/caY2wTUV5IBykm9sXhUOH6eX.2DsQaW/kgZKHuMI9Oa74H5wZMa" // Hash of "password123"
+  "admin": "$2y$10$o/caY2wTUV5IBykm9sXhUOH6eX.2DsQaW/kgZKHuMI9Oa74H5wZMa"
 };
 
 // Login page route

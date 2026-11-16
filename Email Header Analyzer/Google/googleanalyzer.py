@@ -19,7 +19,7 @@ def check_for_spoofing(parsed_header, domain_database):
     return sender_domain in domain_database
 
 # Example usage
-email_header = b"""Delivered-To: oanimel1@gmail.com
+email_header = b"""Delivered-To: recipient@example.com
 Received: by 2002:a05:7000:9ea2:b0:54a:1f0a:e916 with SMTP id dw34csp3080349mab;
         Fri, 5 Jan 2024 21:09:07 -0800 (PST)
 X-Google-Smtp-Source: AGHT+IHNA9ow8WiFwXBX68APbnB9GKkokSjt//RETDOh806GF7JOzXQkz54IcZEYfj73t4Ld2lZR
@@ -51,21 +51,21 @@ ARC-Authentication-Results: i=1; mx.google.com;
 Return-Path: <alerts@fubar.com>
 Received: from mailgw01.fubar.com (mailgw01.fubar.com. [66.172.49.147])
         by mx.google.com with ESMTP id r1-20020a0c8d01000000b00680703b9fa8si3213403qvb.289.2024.01.05.21.09.06
-        for <oanimel1@gmail.com>;
+        for <recipient@example.com>;
         Fri, 05 Jan 2024 21:09:06 -0800 (PST)
 Received-SPF: pass (google.com: domain of alerts@fubar.com designates 66.172.49.147 as permitted sender) client-ip=66.172.49.147;
 Authentication-Results: mx.google.com;
        dkim=pass header.i=@fubar.com header.s=june08 header.b=mvwS8SvP;
        spf=pass (google.com: domain of alerts@fubar.com designates 66.172.49.147 as permitted sender) smtp.mailfrom=alerts@fubar.com;
        dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=fubar.com
-Received: from mailgw01.fubar.com (mailadm003 [10.1.1.117]) by mailgw01.fubar.com (Postfix) with ESMTP id 59DC8C9EDE9 for <oanimel1@gmail.com>; Fri,
+Received: from mailgw01.fubar.com (mailadm003 [10.1.1.117]) by mailgw01.fubar.com (Postfix) with ESMTP id 59DC8C9EDE9 for <recipient@example.com>; Fri,
   5 Jan 2024 21:09:06 -0800 (PST)
 DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=fubar.com; h=from:to :subject:list-unsubscribe:mime-version:content-type:feedback-id :message-id:date; s=june08; bh=uoKVLWmdfsVEQGvRUCZaQdkaGEA=; b=m vwS8SvPLgk/NFcCCJx6K6SUyzI268dqKD+DDVMOQ3YbBSH+SH7WVxkAhOZ02IKTT g/hkQ/xrke/TAaPxJpM/qQVzLGSOk+/XTnrJ4eKXz/FLymAKlraZBVYidfxk29y+ B0M4xOVlllbV/JfiRiv1NRjC0vU9WAQac3LFOMqS+M=
 DomainKey-Signature: a=rsa-sha1; c=nofws; d=fubar.com; h=from:to:subject :list-unsubscribe:mime-version:content-type:feedback-id :message-id:date; q=dns; s=june08; b=Olo8C95QYb9yX0jKW8rqsjAiU26 JVyQ2wfm/On8GcmMDX+D6+HPXdEb5myejg+eBPmS/V/+F1C3qyRggchR1aXs2rpc r2rX4GJx1E19LBEf5oQJ07e+y3bnrMyEbGKOaCA9lQ801udL8fCk5WGpQtXrt1Jf hGRZPLS8qsAvBU7k=
-Received: from 10.1.1.61 (www67-int [10.1.1.7]) by mailgw01.fubar.com (Postfix) with SMTP id 4BBC0C9ECD8 for <oanimel1@gmail.com>; Fri,
+Received: from 10.1.1.61 (www67-int [10.1.1.7]) by mailgw01.fubar.com (Postfix) with SMTP id 4BBC0C9ECD8 for <recipient@example.com>; Fri,
   5 Jan 2024 21:09:06 -0800 (PST)
 From: fubar alert <alerts@fubar.com>
-To: oanimel1@gmail.com
+To: recipient@example.com
 Subject: Naughty n Tattooed Princess misses you on fubar!
 List-Unsubscribe: <mailto:email_unsubscribe@fubar.com>, <http://fubar.com/unsub.php?e=VmpOclkxbHZiR3R3TjJjM2JEbHFRWGhJZFZkRU0xaDNORmRtY2paTk5WRmxPSGQ0U25SVlVGQlVUVDA2T3Q3QUc5QXNkSlpiTGZPa0Rlc3NQd0k9>
 Mime-Version: 1.0

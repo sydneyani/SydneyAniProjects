@@ -16,7 +16,7 @@ Map an utterance to one of eight emotions: neutral, calm, happy, sad, angry, fea
 - **LSTM** (`cnn-rnn-transformer.ipynb`): recurrent model trained for 50 epochs with class-weighted cross-entropy. The log reports validation loss and accuracy each epoch.
 - **Transformer** (same notebook): linear projection to 128 dimensions, two encoder layers with four heads, global average pooling, then a classifier, trained for 10 epochs.
 
-Sample reviews play 10 test clips and print the true label, the predicted label, and a confidence score. The written findings and the training logs are what the results section uses.
+Sample reviews print the true label, the predicted label, and a confidence score for 10 test clips. Embedded audio players were removed from the saved outputs; the text logs and written findings are unchanged.
 
 ## Results
 
