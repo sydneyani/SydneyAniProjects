@@ -1,0 +1,27 @@
+# Shared Python dependencies for the notebooks and small Python utilities.
+# Pinned versions for the car-evaluation notebook live in
+# car-evaluation-mlp/requirements.txt.
+
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+Jinja2
+xgboost
+torch
+ucimlrepo
+librosa
+kagglehub
+
+# Speech-to-action bot and the building-management helper scripts.
+flask
+tensorflow
+SpeechRecognition
+pyaudio
+mysql-connector-python
+requests
+openai
+pvporcupine
+simpleaudio
+pyautogui
