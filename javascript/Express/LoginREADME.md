@@ -1,8 +1,12 @@
-Username: admin
-Password: password123
-To get to login page simply click on the link after running: node app.js
+Set these environment variables before starting the API. Do not commit them.
 
+- `DB_HOST`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`
+- `ADMIN_PASSWORD_HASH` (bcrypt hash for the `admin` user)
 
+To get to the login page, open the link printed after `node app.js`.
+
+```
 npm install bcryptjs
 npm install axios mysql
-npm install express ejs 
+npm install express ejs
+``` 

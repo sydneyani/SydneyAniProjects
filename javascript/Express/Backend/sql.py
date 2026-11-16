@@ -6,11 +6,11 @@ def create_connection(hostname, uname, pwd, dbname):
     connection = None
     try:
         connection = mysql.connector.connect(
-    host="cis3368fall2023.c1eeeidrpfau.us-east-1.rds.amazonaws.com",
-    user="admin",
-    password="580091Sydney",
-    database="cis3368falldb"
-)
+            host=hostname,
+            user=uname,
+            password=pwd,
+            database=dbname,
+        )
         print('connection successful')
     except Error as e:
         print('connection unsuccessful, error is :', e)

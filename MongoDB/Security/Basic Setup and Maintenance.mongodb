@@ -32,7 +32,7 @@ db.logs.aggregate([
 //Setting up Role-Based Access Control
 db.createUser({
     user: "logManager",
-    pwd: "password123",
+    pwd: "<set-a-password>",
     roles: [{ role: "read", db: "securityDB" }]
 })
 

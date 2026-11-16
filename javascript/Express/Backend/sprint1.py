@@ -1,3 +1,4 @@
+import os
 import flask
 from flask import jsonify
 from flask import request, render_template, redirect, url_for
@@ -15,20 +16,21 @@ app.config["DEBUG"] = True  # allow showing errors in the browser
 
 # MySQL Configuration
 connection = mysql.connector.connect(
-    host="cis3368fall2023.c1eeeidrpfau.us-east-1.rds.amazonaws.com",
-    user="admin",
-    password="580091Sydney",
-    database="cis3368falldb"
+    host=os.environ.get("DB_HOST", ""),
+    user=os.environ.get("DB_USER", ""),
+    password=os.environ.get("DB_PASSWORD", ""),
+    database=os.environ.get("DB_NAME", ""),
 )
 
 # Exception Handling Function
 def handle_error(message):
     return jsonify({"error": message}), 500
 
-# Hardcoded username and hashed password (for demonstration purposes)
-users = {
-    "admin": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f"  # Hash of "password123"
-}
+# Demo login. Set ADMIN_PASSWORD_SHA256 to the hex SHA-256 of the password.
+users = {}
+admin_password_sha256 = os.environ.get("ADMIN_PASSWORD_SHA256")
+if admin_password_sha256:
+    users["admin"] = admin_password_sha256
 
 # Login page route
 @app.route('/', methods=['GET'])
