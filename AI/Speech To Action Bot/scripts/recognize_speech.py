@@ -18,7 +18,7 @@ audio_stream = None
 
 # Set up OpenAI API key
 
-client = OpenAI(api_key=openai_api_key)
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 # Function to recognize speech and return the text
 def recognize_speech_from_mic():
@@ -120,7 +120,7 @@ def initialize_porcupine():
         raise ValueError(f"Keyword file not found at path: {keyword_path}")
 
     porcupine = pvporcupine.create(
-        access_key="CJx90F5RMY4vSI8VHpXhaLH39GjdUqyILc96+kGtZajzuGDGlLzd1w==",
+        access_key=os.environ["PICOVOICE_ACCESS_KEY"],
         keyword_paths=[keyword_path]
     )
 

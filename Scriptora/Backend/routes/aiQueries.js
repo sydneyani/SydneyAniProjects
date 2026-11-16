@@ -4,7 +4,7 @@ const { OpenAI } = require('openai');
 
 // Initialize the OpenAI API with your API key directly
 const openai = new OpenAI({
-  apiKey: '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' // Replace with your actual API key
+  apiKey: process.env.OPENAI_API_KEY
 });
 
 let conversationHistory = [];

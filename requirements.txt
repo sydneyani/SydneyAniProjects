@@ -1,0 +1,15 @@
+# Python stack for the notebooks under projects/.
+# numpy, pandas, scikit-learn, and matplotlib match the versions recorded
+# in the car-evaluation notebook output. Other packages are unpinned.
+
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.4.2
+matplotlib==3.8.4
+seaborn
+Jinja2
+ucimlrepo
+xgboost
+torch
+librosa
+kagglehub

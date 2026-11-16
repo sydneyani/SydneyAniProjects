@@ -1,0 +1,27 @@
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+.venv/
+venv/
+.env
+.env.*
+
+# Node
+node_modules/
+dist/
+build/
+*.log
+
+# OS and editor
+.DS_Store
+.idea/
+.vscode/
+
+# Local data caches and runtime uploads
+.cache/
+Scriptora/Backend/uploads/
+Full Stack Applications/MEVN Project/backend/uploads/
