@@ -24,17 +24,17 @@ Figures below are the accuracy lines saved in the notebook. Weighted-average F1 
 
 | Model | Accuracy | Weighted F1 |
 | --- | --- | --- |
-| Logistic regression | 0.790 | 0.74 |
-| KNN (k=5) | 0.790 | 0.76 |
-| Random forest (100 trees) | 0.783 | 0.76 |
-| Tuned random forest | 0.811 | 0.78 |
-| Tuned KNN | 0.790 | 0.76 |
-| Random forest in the later comparison cell | 0.806 | 0.77 |
-| SVM, RBF kernel | 0.809 | 0.77 |
-| XGBoost | 0.818 | 0.78 |
-| Extreme learning machine | 0.804 | 0.76 |
+| Logistic regression | 0.7904 | 0.74 |
+| KNN (k=5) | 0.7899 | 0.76 |
+| Random forest (100 trees) | 0.7831 | 0.76 |
+| Tuned random forest | 0.8110 | 0.78 |
+| Tuned KNN | 0.7903 | 0.76 |
+| Random forest in the later comparison cell | 0.8062 | 0.77 |
+| SVM, RBF kernel | 0.8091 | 0.77 |
+| XGBoost | 0.8184 | 0.78 |
+| Extreme learning machine | 0.8044 | 0.76 |
 | PyTorch network | 0.75 | 0.65 |
-| Ensemble | 0.818 | 0.78 |
+| Ensemble | 0.8184 | 0.78 |
 
 The linear SVM cell starts training and does not save an accuracy line. The notebook conclusion names XGBoost as the highest accuracy, 0.82, with F1 0.78, matching the XGBoost and ensemble rows above (printed accuracy 0.8183727034120735).
 
